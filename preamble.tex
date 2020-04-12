@@ -1,0 +1,72 @@
+%-----------------------------------------------------------------------------------------------------------------------
+%Abkürzungsverzeichnis
+\usepackage[printonlyused]{acronym}
+
+%Sprache festlegen auf Deutsch
+\usepackage[ngerman]{babel} 
+
+%Quellenverzeichnis
+\usepackage[natbib=true, backend=biber, style=authoryear, dashed=false]{biblatex}
+\addbibresource{content/bib/bibliography.bib}
+
+%Schriftart
+\usepackage{carlito}
+\setmainfont{carlito}
+
+%Fortgeschrittene Funktionen für Zitate 
+\usepackage{csquotes}
+
+%Positionierung von Tabellen und Abbildungen
+\usepackage{float}
+
+%OpenType fonts können geladen werden
+\usepackage{fontspec}
+
+%Seitenränder einstellen
+\usepackage[left=3.0cm, right=3.0cm, head=2.5cm, bottom=3cm]{geometry}
+
+%Abbildungen
+\usepackage{graphicx}  
+\graphicspath{{content/images/}}
+
+%Verweise
+\usepackage[hidelinks]{hyperref}
+\usepackage{cleveref}   %cleveref muss nach hyperref geladen werden
+
+%Header / Footer
+\usepackage[headsepline,footsepline,plainfootsepline]{scrlayer-scrpage}
+\renewcommand*{\sectionmarkformat}{} %lässt die Nummerierungszahl der Section aus dem Header verschwinden
+\clearpairofpagestyles
+\ohead{\headmark}
+\automark{section}
+\ofoot[\pagemark]{\pagemark}
+\cfoot[\thesistitel]{\thesistitel}
+
+%Zeilenabstand einstellen
+\usepackage[onehalfspacing]{setspace}
+
+%Bilder, Tabellen etc. nebeneinander platzieren
+\usepackage{subcaption}
+
+%Für Notizen
+\usepackage[colorinlistoftodos,prependcaption]{todonotes}
+
+% Wird gebraucht um Fehlermeldung wegzubekommen
+\setlength {\marginparwidth }{2cm} 
+
+%TODOS
+\newcommand{\unsure}[2][1=]{\todo[linecolor=red,backgroundcolor=red!25,bordercolor=red,#1]{#2}}
+\newcommand{\change}[2][1=]{\todo[linecolor=blue,backgroundcolor=blue!25,bordercolor=blue,#1]{#2}}
+\newcommand{\info}[2][1=]{\todo[linecolor=green,backgroundcolor=green!25,bordercolor=green,#1]{#2}}
+\newcommand{\improvement}[2][1=]{\todo[linecolor=violet,backgroundcolor=violet!25,bordercolor=violet,#1]{#2}}
+
+%Farben
+\usepackage{xcolor}
+
+%-----------------------------------------------------------------------------------------------------------------------
+%Counter um die Seiten zu zählen, für römische Zahlen
+\newcounter{seitenanzahl}
+%Inhaltsverzeichnis ins Inhaltsverzeichnis
+\setuptoc{toc}{totoc}
+%-----------------------------------------------------------------------------------------------------------------------
+

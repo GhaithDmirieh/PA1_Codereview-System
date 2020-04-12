@@ -1,0 +1,55 @@
+\thispagestyle{empty}
+
+\vspace*{-2.5cm}
+
+\ifseminararbeit
+\else
+\includegraphics[width=6cm]{BeispielLogo}
+\fi
+\hfill
+\includegraphics[width=6cm]{logo-dhbw}
+\vspace*{3cm}
+
+\begin{center}
+{\LARGE \thesistitel} \\
+\vspace{0.5cm}
+
+\ifsperrvermerk 
+\textcolor{red}{\large mit Sperrvermerk\\}
+\else
+\vspace{2cm}
+\fi
+
+\vspace{1cm}
+
+\textbf{\large \thesistyp}\\
+
+%\vspace{2cm}
+%für die Prüfung zum \\ 
+%\abschluss \\
+
+\vspace{2cm} 
+des Studiengangs \studiengang \\
+an der \\
+Dualen Hochschule Baden-Württemberg Lörrach \\
+
+\vspace{1cm}
+\thesisauthor \\
+\abgabedatum
+\vfill
+
+\begin{tabular}{l l}
+Kurs & \kurs \\
+Ausbildungsunternehmen & \unternehmen \\
+
+\ifseminararbeit
+\else
+Unternehmensbetreuer & \unternehmensbetreuer \\
+\fi
+
+\ifdhbwbetreuer
+Wissenschaftlicher Betreuer & \dhbwbetreuer \\
+\fi
+
+\end{tabular}
+\end{center}

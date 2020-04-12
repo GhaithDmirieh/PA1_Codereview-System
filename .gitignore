@@ -1,0 +1,17 @@
+*.pdf
+*.ps
+*.aux
+*.lst
+*.dvi
+*.log
+*.tps
+*.tiw
+*.cpt
+*.out
+*.toc
+*.bbl
+*.blg
+*.bcf
+*.lof
+*.lot
+*.xml
