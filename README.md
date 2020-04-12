@@ -9,4 +9,12 @@
 ### Beispielsweise in der Shell:  
 lualatex document.tex && biber document && lualatex document.tex && lualatex document.tex 
 
+### In TexMaker unter Schnelles Übersetzen User-Buildvorgehen:
+lualatex -interaction=nonstopmode %.tex|biber %|lualatex -interaction=nonstopmode %.tex
+
+### Für das Inhaltsverzeichnis:
+Bearbeite die Datei .bib in Ordner \content\bib.
+
+Füge die Quellen in BibTeX Form hinzu.
+Tipp: Benutze lieber JabRef.
 
