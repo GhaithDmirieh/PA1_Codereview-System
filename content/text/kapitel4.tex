@@ -24,8 +24,8 @@ Bitbucket ist ein Quellcode-Management-System der das \ac{VCS} Git unterstützt.
 			\item Forking-Workflow.
 		\end{itemize}
 \end{itemize}
-Die Abbildung \ref{fig:Forking-workflow} zeigt die Forking-Workflow mit Pull-Anfrage.
 
+Die Abbildung \ref{fig:Forking-workflow} zeigt die Forking-Workflow mit Pull-Anfrage.
 
 \begin{figure}[H]
 	\centering
@@ -48,9 +48,9 @@ Die Abbildung \ref{fig:Forking-workflow} zeigt die Forking-Workflow mit Pull-Anf
 	\item [Nachteile:] \hfill
 	\begin{enumerate}
 		\item Es besteht keine Möglichkeit, um bestehende gemergte commits zu reviewen.
-		\item Review ist nur vor dem Zusammenführen von einer Feature-Branche mit dem Master-Branche Möglich.
-		\item Um zu hosten in Bitbucketsever steht für mehr als 5 Personen einen monatlichen Beitrag.\\ Und für Self-hosten (auf eigenem Server) besteht eine einmalige Zahlung.\\
-		Der Preis für beide Varianten variiert je nach Personenanzahl.
+		\item Review ist nur vor dem Zusammenführen von einem Feature-Branch mit dem Master-Branch Möglich.
+		\item Um zu hosten in Bitbucketsever steht für mehr als 5 Personen einen monatlichen Beitrag und für Self-hosten (auf eigenem Server) besteht eine einmalige Zahlung. Der 
+			Preis für beide Varianten variiert je nach Personenanzahl.
 	\end{enumerate}
 \end{description}
 
@@ -78,10 +78,9 @@ Crucible ist eine webbasierte Anwendung, die eine Unkomplizierte, formelle Coder
 				\begin{figure}[H]
 					\centering
 					\includegraphics[width=1.0\textwidth]{one-to-one-review}
-					\caption[Crucible: one-to-one-review]{Crucible Ablaufsmöglichkeit,\\ Quelle: Atlassian Crucible-Workflow}
+					\caption[Crucible: one-to-one-review]{Crucible Ablaufsmöglichkeit,\\ Quelle: \cite{Crucible}}
 					\label{fig:one-to-one-workflow}
 				\end{figure}
-				\change{Füge eine richtige Quelle hinzu}
 				
 			\item Formal group reviews: Der Autor startet die Review und ladet die Reviewer ein. So können die Review diese diskutieren und dementsprechend bekommen die Reviewer 
 				die Antworten vom Autor (Der Autor ist in dem Fall auch der Moderator). Jeder Diskussionspunkt wird vom Moderato festgelegt. So bald die Review zu Ende kommt,
@@ -90,10 +89,9 @@ Crucible ist eine webbasierte Anwendung, die eine Unkomplizierte, formelle Coder
 				\begin{figure}[H]
 					\centering
 					\includegraphics[width=1.0\textwidth]{Formal-group-reviews}
-					\caption[Crucible: Formal group review]{Crucible Ablaufsmöglichkeit,\\ Quelle: Atlassian Crucible-Workflow}
+					\caption[Crucible: Formal group review]{Crucible Ablaufsmöglichkeit,\\ Quelle:\cite{Crucible}}
 					\label{fig:Formal-group-review}
 				\end{figure}
-				\change{Füge eine richtige Quelle hinzu}
 		\end{enumerate}
 		
 \end{itemize}
@@ -125,11 +123,12 @@ Helix TeamHub ist eine webbasierte Plattform, die Hosten und Management von Repo
 	\item \textbf{Art der Review}: \textit{pre- and post-commit}.
 	\item \textbf{Entwickler}: Perforce. 
 	\item \textbf{Reviews Workflow}: Die Review kann in Helix Teamhub eingerichtet werden, so kann das Mitglied, das die Review erstellte, entscheiden, wer die Reviewer
-		 sind und welche Änderungen in welchem Branche überprüft werden sollen.	\\ Ein Beispiel für einen möglichen Workflow:
+		 sind und welche Änderungen in welchem Branch überprüft werden sollen.
+		 Ein Beispiel für einen möglichen Workflow:
 		 
 		  Git-Feature-Branch-Workfow: Der Ablauf ähnelt sich dem Feature-Branch Workflow von Bitbucket in Abschnitt \ref{subsec:Bitbucket}.
-		  Es wird zuerst ein Projekt erstellt und zu diesem Projekt wird ein Repository hinzugefügt. Durch git wird eine Branche in diesem Repository
-		  erstellt. Der Entwickler arbeitet an dieser Branche. Sobald er eine Review braucht, erstellt er eine. In den Einstellungen sucht man die Branche aus, dann werden Reviewer
+		  Es wird zuerst ein Projekt erstellt und zu diesem Projekt wird ein Repository hinzugefügt. Durch git wird ein Branch in diesem Repository
+		  erstellt. Der Entwickler arbeitet an diesem Branch. Sobald er eine Review braucht, erstellt er eine. In den Einstellungen sucht man den Branch aus, dann werden Reviewer
 		  ausgewählt. In der Review sind die Kommentare auf Zeilenebene möglich. So bekommt der Autor Antworten und Verbesserungsvorschläge. Sobald die Review fertig ist,
 		  können die Änderungen automatisch in der Master Branche zusammengeführt werden, was sich durch einen Klick erfolgen lässt. 
 \end{itemize}
@@ -171,13 +170,12 @@ In diesem Abschnitt handelt es sich um ein \ac{CRS}, das sich von den bis jetzt 
 				\item Direkt im Gerrits Web-Plattform.
 				\item via REST endpoint. 
 				\item via SSH command.
-				\item Manuell durch git. \unsure{ERKLÄRUNG}
+				\item Manuell durch git.
 			\end{itemize}
 			Hinweis: Nicht jeder Benutzer kann ein Gerrits Projekt erstellen, denn das braucht die Admins Rechte.		
 			
-			\item Features entwickeln, dann die commiten und pushen. In diesem Fall pusht man die Änderungen nicht in die Master Branche, sondern in einer Gerrits Branche.
-			
-				Diese Branche benutzt Gerrit für die Review. Dementsprechend kommt man mit \textit{git diff} (git Befehl, um alte und neue Änderungen zu vergleichen) zum Vergleich
+			\item Features entwickeln, dann die commiten und pushen. In diesem Fall pusht man die Änderungen nicht in den Master Branch, sondern in einen Gerrits Branchen.
+				Gerrit benutzt Dieser Branch für die Review. Dementsprechend kommt man mit \textit{git diff} (git Befehl, um alte und neue Änderungen zu vergleichen) zum Vergleich
 				zwischen den Änderungen im Arbeitsverzeichnis und den Änderungen auf der Gerrits Branche.
 			\item Nach pushen wird einen Link erzeugt, den zur Webseite führt. Auf dieser Webseite kann der Autor: 
 			\begin{itemize}
@@ -190,28 +188,25 @@ In diesem Abschnitt handelt es sich um ein \ac{CRS}, das sich von den bis jetzt 
 			\begin{figure}[H]
 				\centering
 				\includegraphics[width=0.9\textwidth]{Gerrit-Reviews Webseite}
-				\caption[Gerrit]{Reviews Webseite,\\ Quelle: kommt bald}
+				\caption[Gerrit]{Reviews Webseite,\\ Quelle: \cite{Gerrit}}
 				\label{fig:Gerrit-Reviews Webseite}
 			\end{figure}
-			\change{Füge eine richtige Quelle hinzu}
-			
+						
 			\item Die Reviewer können entweder die Review manuell finden oder bekommen die eine E-Mail(wenn sie vom Autor als Reviewer gemerkt sind), dass eine Review
-				 gestartet wurde.
-				 
-				 Die Reviewer schauen die Änderungen, antworten auf sie und am Ende bewerten sie. Die Bewertung ist in Gerrit vorgeschrieben.
+				 gestartet wurde. Die Reviewer schauen die Änderungen, antworten auf sie und am Ende bewerten sie. Die Bewertung ist in Gerrit vorgeschrieben.
 				 Dann passiert Folgendes:
 				 \begin{itemize}
 				 	\item Sind die Änderungen fehlerhaft oder fehlt etwas, was der Autor beachten musste, so fordern die Reviewer den Autor, die Änderungen zu bearbeitet
-				 		und nochmal in die Gerrits Branche zu pushen.
+				 		und nochmal in den Gerrits Branch zu pushen.
 				 	\item Erfüllen die Änderungen die Anforderungen, So ist die Review geschlossen.
 				 \end{itemize}
 			\item Darüber hinaus fragt Gerrit nach Bestätigung, dass die Änderungen getestet wurden, dass die also funktionieren. Testen kann entweder 
 			\begin{itemize}
-				\item Manuell. Die Änderungen fetchen und lokal testen.
+				\item Manuell. Die Änderungen fetchen und lokal testen
 				\item Oder durch Nutzen von \ac{CI} Tools.
 			\end{itemize}
 			\item So bald die Review fertig ist und die Features getestet wurden, werden die Änderungen einschließlich der Review je nach den Projekts Einstellungen in
-				die Master Branche gepusht.
+				den Master Branch gepusht.
 		\end{enumerate}
 		
 \end{itemize}
@@ -221,7 +216,7 @@ In diesem Abschnitt handelt es sich um ein \ac{CRS}, das sich von den bis jetzt 
 	\begin{enumerate}
 		\item Gerrit kann multiple Repositories beaufsichtigen.
 		\item Clean history \unsure{Erkläre warum (git push --f)}
-		\item Jede Repository kann unendliche Anzahl von Branchen enthalten.
+		\item Jede Repository kann unendliche Anzahl von Branchs enthalten.
 		\item Automatisches Mergen mit der Git-Repository nach Überprüfung der Änderungen ist möglich.
 		\item \ac{CI}/\ac{CD} können in den Workflow eingebaut werden.
 		\item Benutzerfreundliche Webschnittstelle zum Reviewen.
@@ -233,7 +228,6 @@ In diesem Abschnitt handelt es sich um ein \ac{CRS}, das sich von den bis jetzt 
 		\item Mit Gerrit ist die Review und das Testen der neuen Änderungen Pflicht.
 		\item Nur Administratoren können Projekte in Gerrit hinzufügen.
 		\item Gerrit arbeitet ausschließlich mit Git.
-		\item Gerrit fordert gute Git-Kenntnisse.
 	\end{enumerate}
 \end{description}
 
@@ -249,8 +243,8 @@ RhodCode bietet eine freie Edition "RhodeCode CE" (Community Edition) sowie zwei
 	\item \textbf{Workflow}:
 	\begin{itemize}
 		\item Die Review kann durch eine Pull-Anfrage gestartet werden. Die Abbildung \ref{fig:Forking-workflow} vom Abschnitt \ref{subsec:Bitbucket} zeigt den Ablauf
-			eine Pull-Anfrage. Also der Entwickler arbeitet in einer von Master-Branche abgespalteten-Branche macht Änderungen und sendet eine Pull-Anfrage so bald er fertig ist. 
-			So Geschieht die Review dementsprechend vor dem Mergen mit der Master-Branche.
+			eine Pull-Anfrage. Also der Entwickler arbeitet in einem von Master-Branche abgespalteten-Branch macht Änderungen und sendet eine Pull-Anfrage so bald er fertig ist. 
+			So Geschieht die Review dementsprechend vor dem Mergen mit dem Master-Branch.
 		\item Oder kann der Reviewer sich die Änderungen in Commits-Historie anschauen und bestimmte Code-Zeile kommentieren und den Autor erwähnen, indem er seinen Namen nach einem 
 			\textbf{@} schreibt. So bekommt der Autor eine E-Mail, dass jemand seine Änderungen überprüft hat.
 	\end{itemize}
@@ -265,7 +259,7 @@ RhodCode bietet eine freie Edition "RhodeCode CE" (Community Edition) sowie zwei
 			\item Ein kostenloses- und Opensource-Projekt.
 			\item Unbegrenzte Anzahl von Benutzern.
 			\item Benutzerzugriffskontrolle.
-			\item Dateisuche in allen Repositorys sowie Volltextsuche \& Indizierung vom Quellcode.
+			\item Dateisuche in allen Repositories sowie Volltextsuche \& Indizierung vom Quellcode.
 			\item Grundlegende Integrationen einschließlich E-Mail, Slack und Hipchat.
 		\end{enumerate}
 	\item [Nachteile] \hfill
@@ -306,19 +300,21 @@ RhodCode bietet eine freie Edition "RhodeCode CE" (Community Edition) sowie zwei
 \subsection{Github}
 \label{Github}
 
-Github ist eine webbasiert Plattform für das Management vom Quelltext. Github arbeitet ausschließlich mit dem \ac{VCS} Git. Es bietet die Gelegenheit, unbegrenzte Anzahl von public/private Repositories auf Githubs Server zu hosten. Es gehört seit Juni. 2018 Microsoft.
+Github ist eine webbasiert Plattform für das Management vom Quelltext. Github arbeitet ausschließlich mit dem \ac{VCS} Git. Es bietet die Gelegenheit, unbegrenzte Anzahl von public/private Repositories (Private Repositories erst seit 8. Januar 2019) auf Githubs Server zu hosten. Außerdem gehört Github seit Juni. 2018 Microsoft.
 
 \begin{itemize}
 	\item \textbf{Art der Review}: \textit{pre- and post-commit}
 	\item \textbf{Entwickler}: Tom Preston-Werner, Chris Wanstrath, P. J. Hyett.
-	\item \textbf{Workflow}: Die Review funktioniert in Github durch eine Pull-Anfrage, wie beim Bitbuckets Workflow in \ref{subsec:Bitbucket} arbeitet der Entwickler an einer
-		speziellen Branche, macht Änderungen und startet eine Pull-Anfrage und wählt die Reviewer, die eine Nachricht bekommen, dass sie zur Überprüfung gefragt sind. Nach Annahme der
-		Änderungen, können diese automatisch mit der Master-Branche zusammengeführt werden.
+	\item \textbf{Workflow}: Die Review funktioniert in Github durch eine Pull-Anfrage, wie beim Bitbuckets Workflow in \ref{subsec:Bitbucket} arbeitet der Entwickler an einem
+		speziellen Branch, macht Änderungen und startet eine Pull-Anfrage und wählt die Reviewer, die eine Nachricht bekommen, dass sie zur Überprüfung gefragt sind. Nach Annahme der
+		Änderungen, können diese automatisch mit dem Master-Branch zusammengeführt werden.
 \end{itemize}
 
 Github bietet 4 Pläne. Davon werden nur 2 besprochen:
+
 \subsubsection{Github Free}
 \label{subsubsec:Free}
+
 Die Kostenlose Variante für die Community.
 \begin{description}
 	\item [Vorteile:] \hfill
