@@ -16,7 +16,8 @@ Bitbucket ist ein Quellcode-Management-System der das \ac{VCS} Git unterstützt.
 
 \begin{itemize}
 	\item \textbf{Art der Review}: \textit{pre- and post-commit} Und die erfolgt durch eine Pull-Anfrage.
-	\item \textbf{Entwickler}: Bitbucket wurde 2007 vom Jesper Nøhr entwickelt und 2010 von Atlassian gekauft. 
+	\item \textbf{Entwickler}: Bitbucket wurde 2007 vom Jesper Nøhr entwickelt und 2010 von Atlassian \footnote{\url{https://bitbucket.org/}}
+		 gekauft. 
 	\item \textbf{Reviews Workflow}: Eine Pull-Request kann in 3 verschiedenen Weisen gemacht werden:
 		\begin{itemize}
 			\item Feature-Branch-Workflow.
@@ -41,15 +42,14 @@ Die Abbildung \ref{fig:Forking-workflow} zeigt die Forking-Workflow mit Pull-Anf
 		\item Hosting in Cloud oder auf eigenem Server.
 		\item \ac{CI}/\ac{CD} sind in Bitbucket integriert.
 		\item Erstellen von einer Merge-Checkliste mit zugeordneten Genehmigern.
-		\item Für kleine Teams (Bis 5 Personen) bestehen keine Kosten.
-		\item Nettes Design.
+		\item Für kleine Teams bis 5 Personen bestehen keine Kosten für das Hosten auf Bitbuckets Server.
 	\end{enumerate}
 	
 	\item [Nachteile:] \hfill
 	\begin{enumerate}
 		\item Es besteht keine Möglichkeit, um bestehende gemergte commits zu reviewen.
 		\item Review ist nur vor dem Zusammenführen von einem Feature-Branch mit dem Master-Branch Möglich.
-		\item Um zu hosten in Bitbucketsever steht für mehr als 5 Personen einen monatlichen Beitrag und für Self-hosten (auf eigenem Server) besteht eine einmalige Zahlung. Der 
+		\item Um zu hosten auf Bitbucketsever steht für mehr als 5 Personen einen monatlichen Beitrag und für Self-hosten (auf eigenem Server) besteht eine einmalige Zahlung. Der 
 			Preis für beide Varianten variiert je nach Personenanzahl.
 	\end{enumerate}
 \end{description}
@@ -137,8 +137,8 @@ Helix TeamHub ist eine webbasierte Plattform, die Hosten und Management von Repo
 	\item [Vorteile:] \hfill
 	\begin{enumerate}
 		\item Workflows sind flexibel, so dass die Administratoren diese einrichten können.
-		\item Schnelle Übersicht über alle Branchen eines Repositorys.
-		\item Zugriffsverwaltung, so kann sich der Admenstrator entscheiden, wer an einer repository arbeitet und welche Rechte hat.
+		\item Schnelle Übersicht über alle Branchs eines Repositorys.
+		\item Zugriffsverwaltung, so kann sich der Admenstrator entscheiden, wer an einem repository arbeitet und welche Rechte hat.
 		\item Side-by-side Änderungsvergleich.
 		\item Der Prozess der Review kann kontrolliert werden. Die Review kann auf bestimmte Personen beschränkt werden.
 		\item Mergen von Reviews erfolgt automatisch.
@@ -165,7 +165,7 @@ Gerrit ist ein \ac{CRS}, das sich von den anderen \acp{CRS} stark unterscheidet.
 	\item \textbf{Entwickler}: Google.
 	\item \textbf{Workflow}: Gerrit hat nur einen Ablauf für den Review, der nach diesen Schritten erfolgt:
 		\begin{enumerate}
-			\item Projekt für die Repository erstellen. Für die Erstellung vom Gerrit-Projekt gibt es 4 Methoden:
+			\item Projekt für das Repository erstellen. Für die Erstellung vom Gerrit-Projekt gibt es 4 Methoden:
 			\begin{itemize}
 				\item Direkt im Gerrits Web-Plattform.
 				\item via REST endpoint
@@ -217,7 +217,7 @@ Gerrit ist ein \ac{CRS}, das sich von den anderen \acp{CRS} stark unterscheidet.
 		\item Gerrit kann multiple Repositories beaufsichtigen.
 		\item Clean history \unsure{Erkläre warum (git push --f)}
 		\item Jedes Repository kann unendliche Anzahl von Branchs enthalten.
-		\item Automatisches Mergen mit der Git-Repository nach Überprüfung der Änderungen ist möglich.
+		\item Automatisches Mergen mit dem Git-Repository nach Überprüfung der Änderungen ist möglich.
 		\item \ac{CI}/\ac{CD} können in den Workflow eingebaut werden.
 		\item Benutzerfreundliche Webschnittstelle zum Reviewen.
 		\item Kostenlos \& Open-Source-Projekt.
@@ -234,7 +234,7 @@ Gerrit ist ein \ac{CRS}, das sich von den anderen \acp{CRS} stark unterscheidet.
 \subsection{RhodCode}
 \label{subsec:RhodeCode}
 
-RhodCode ist ein Quellcode-Management, das die \acp{VCS} Git, Mercurial unterstützt. Es ist webbasiert also bietet auch eine Web-Schnittstelle, in der die Review geschieht.
+RhodCode ist ein Quellcode-Management, das die \acp{VCS} Git, Mercurial unterstützt. Es ist eine webbasierte Plattform also bietet auch eine Web-Schnittstelle, in der die Review geschieht.
 RhodCode bietet eine freie Edition „RhodeCode CE“ (Community Edition) sowie zwei kostenpflichtige Editions „RhodeCode EE“ (Enterprise Edition) und RhodeCode Cloud (Beta).
 
 \begin{itemize}

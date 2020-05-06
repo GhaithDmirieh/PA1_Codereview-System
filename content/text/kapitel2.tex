@@ -3,8 +3,29 @@
 
 \subsection{Definition}
 \label{subsec:Definition}
-Unter \emph{Codereview} versteht man ein Verfahren, das die Gelegenheit jemandem anderen anbietet, die Änderungen des Autors im Quelltext zu überprüfen.
-Es ist eine Art der Sicherheit, um Fehler zu vermeiden, jedoch nicht nur.
+
+\begin{description}
+	\item [Codereview:] \hfill
+		Darunter versteht man ein Verfahren, das die Gelegenheit jemandem anderen anbietet, die Änderungen des Autors im Quelltext zu überprüfen. Es ist eine Art der Sicherheit, um 				Fehler zu vermeiden, jedoch nicht nur.
+
+	\item [Version-Control-Systeme:] \hfill
+
+	\item [Git] \hfill
+		\unsure{kurze Erklärung}
+	
+	\item [SVN]
+	
+	\item [CVN]
+	
+	\item [Post-commit] \hfill
+	
+	\item [pre-commit] \hfill
+		
+	\item [pull-requests] \hfill
+	
+	\item [\ac{CI}/\ac{CD}]
+			
+\end{description}
 
 \subsection{Warum überhaupt}
 \label{subsec:Gründe}
@@ -28,4 +49,14 @@ Es gibt verschiedene Verfahren von Reviews. Die am häufigsten benutzte Verfahre
 	\item Over–the–shoulder: Der Autor setzt direkt neben dem Reviewer, der die Änderungen kritisiert. Dieses Verfahren ist eine informelle Review.
 	\item Email pass-around: Der Autor sendet eine E-Mail mit dem Code zur Überprüfung des Codes an die Reviewer.
 	\item Tool-assisted: auch \ac{CRS}. Hier werden Tools benutzt, die die Änderungen je nach Einstellung des Systems an die Rezensenten zum Überprüfen weiterleiten.
+	\item Reviewsitzung: Das Team trefft sich regelmäßig, je nach Absprache. Diverse Meinungen werden dargestellt.
+	\item Stand Up Meeting: Am Ende des Tages werden die Änderungen diskutiert. Das Team muss nicht unbedingt dabei sein, sondern nur die für die Änderungen zuständig sind.
+	\item Planung: Entwickler werden zur Review eingeladen, rollen werden verteilt und die Bedingungen werden festgelegt.
 \end{itemize}
+
+Nachteile der Methoden die nicht Tool-basiert sind:
+\begin{itemize}
+	\item Die Änderungen werden zuerst im Quellcode geschrieben, was Fehler enthalten kann und danach kommt die Review.
+	\item Dieser Prozess ist nicht flexibel, denn es fordert die Anwesenheit der für die Änderungen zuständige Personen zusammen mit den Rezensenten.
+\end{itemize}
+
