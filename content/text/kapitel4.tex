@@ -22,7 +22,7 @@ Bitbucket ist ein Quellcode-Management-System der das \ac{VCS} Git unterstützt.
 		\end{itemize}
 \end{itemize}
 
-Die Abbildung \ref{fig:Forking-workflow} zeigt die Forking-Workflow mit Pull-Anfrage.
+Die \cref{fig:Forking-workflow} zeigt die Forking-Workflow mit Pull-Anfrage.
 
 \begin{figure}[H]
 	\centering
@@ -53,7 +53,7 @@ Die Abbildung \ref{fig:Forking-workflow} zeigt die Forking-Workflow mit Pull-Anf
 \subsection{Crucible}
 \label{subsec:Crucible}
 
-Crucible ist eine webbasierte Anwendung, die eine unkomplizierte, formelle Codereview anbietet. Sie unterstützt die \acp{VCS} SVN, Git, Mercurial, CVN, perforce.
+Crucible ist eine webbasierte Anwendung, die eine unkomplizierte, formelle Codereview anbietet. Sie unterstützt die \acp{VCS} \ac{SVN}, Git, Mercurial, \ac{CVN}, perforce.
 
 \begin{itemize}
 	\item \textbf{Art der Review}: \textit{pre- and post-commit}
@@ -70,7 +70,7 @@ Crucible ist eine webbasierte Anwendung, die eine unkomplizierte, formelle Coder
 		\begin{enumerate}
 			\item One-to-One Reviews: Der Autor startet die Review (Der Autor ist also in diesem Workflow der Moderator), danach kommentiert der Reviewer und der Autor kann auf diese
 				Kommentar reagieren. Das kann sich mehrmals wiederholen bis die Review fertig ist und der Autor diese schließt.\\
-				Die Abbildung \ref{fig:one-to-one-workflow} beschreibt diesen Workflow.
+				Die \cref{fig:one-to-one-workflow} beschreibt diesen Workflow.
 				\begin{figure}[H]
 					\centering
 					\includegraphics[width=1.0\textwidth]{one-to-one-review}
@@ -81,7 +81,7 @@ Crucible ist eine webbasierte Anwendung, die eine unkomplizierte, formelle Coder
 			\item Formal group reviews: Der Autor startet die Review und lädt die Reviewer ein. So können die Reviewer diese diskutieren und dementsprechend bekommen die Reviewer 
 				die Antworten vom Autor (Der Autor ist in dem Fall auch der Moderator). Jeder Diskussionspunkt wird vom Moderator festgelegt. So bald die Review zu Ende kommt,
 				fasst der Moderator die Review zusammen und schließt sie.\\
-				Die Abbildung \ref{fig:Formal-group-review} zeigt diesen Ablauf.
+				Die \cref{fig:Formal-group-review} zeigt diesen Ablauf.
 				\begin{figure}[H]
 					\centering
 					\includegraphics[width=1.0\textwidth]{Formal-group-reviews}
@@ -100,7 +100,7 @@ Crucible ist eine webbasierte Anwendung, die eine unkomplizierte, formelle Coder
 		\item Nachverfolgen, Maßnahmen ergreifen in Bezug auf das, was der Autor wichtig findet.
 		\item Ansicht vom Reviewstatus und wer möglicherweise Überprüfungen aufhält.
 		\item Berichte über Stellen im Quelltext, die noch nicht überprüft wurden.
-		\item unterstützt nicht nur Git sonder SVN auch.
+		\item unterstützt nicht nur Git sonder \ac{SVN} auch.
 	\end{enumerate}
 	
 	\item [Crucibles Nachteile:] \hfill
@@ -113,7 +113,7 @@ Crucible ist eine webbasierte Anwendung, die eine unkomplizierte, formelle Coder
 \subsection{Helix TeamHub}
 \label{subsec:HelixTeamHub}
 
-Helix TeamHub ist eine webbasierte Plattform, die Hosten und Management von Repositories ermöglicht. Sie unterstützt Mercurial, Git, SVN, Ivy und mehr.
+Helix TeamHub ist eine webbasierte Plattform, die Hosten und Management von Repositories ermöglicht. Sie unterstützt Mercurial, Git, \ac{SVN}, Ivy und mehr.
 
 \begin{itemize}
 	\item \textbf{Art der Review}: \textit{pre- and post-commit}.
@@ -122,7 +122,7 @@ Helix TeamHub ist eine webbasierte Plattform, die Hosten und Management von Repo
 		 sind und welche Änderungen in welchem Branch überprüft werden sollen.
 		 Ein Beispiel für einen möglichen Workflow:
 		 
-		  Git-Feature-Branch-Workfow: Der Ablauf ähnelt sich dem Feature-Branch Workflow von Bitbucket in Abschnitt \ref{subsec:Bitbucket}.
+		  Git-Feature-Branch-Workfow: Der Ablauf ähnelt sich dem Feature-Branch Workflow von Bitbucket im \cref{subsec:Bitbucket}.
 		  Es wird zuerst ein Projekt erstellt und zu diesem Projekt wird ein Repository hinzugefügt. Durch Git wird ein Branch in diesem Repository
 		  erstellt. Der Entwickler arbeitet an diesem Branch. Sobald er eine Review braucht, erstellt er eine. In den Einstellungen sucht man den Branch aus, dann werden Reviewer
 		  ausgewählt. In der Review sind die Kommentare auf Zeilenebene möglich. So bekommt der Autor Antworten und Verbesserungsvorschläge. Sobald die Review fertig ist,
@@ -179,7 +179,7 @@ Gerrit ist ein \ac{CRS}, das sich von den anderen \acp{CRS} stark unterscheidet.
 				\item Reviewer hinzufügen.
 				\item Kommentare, Anmerkungen an bestimmten Code-Zeilen für die Reviewer hinterlassen.
 			\end{itemize}
-			Die Abbildung \ref{fig:Gerrit-Reviews Webseite} soll einen allgemeinen Überblick über die Webseite geben.
+			Die \cref{fig:Gerrit-Reviews Webseite} soll einen allgemeinen Überblick über die Webseite, in der den Review gestartet wird, geben.
 			
 			\begin{figure}[H]
 				\centering
@@ -238,7 +238,7 @@ RhodCode bietet eine freie Edition „RhodeCode CE“ (Community Edition) sowie 
 	\item \textbf{Entwickler}: RhodeCode.
 	\item \textbf{Workflow}:
 	\begin{itemize}
-		\item Die Review kann durch eine Pull-Anfrage gestartet werden. Die Abbildung \ref{fig:Forking-workflow} vom Abschnitt \ref{subsec:Bitbucket} zeigt den Ablauf
+		\item Die Review kann durch eine Pull-Anfrage gestartet werden. Die \cref{fig:Forking-workflow} vom \cref{subsec:Bitbucket} zeigt den Ablauf
 			eine Pull-Anfrage. Also der Entwickler arbeitet in einem vom Master-Branch abgespalteten-Branch macht Änderungen und sendet eine Pull-Anfrage so bald er fertig ist. 
 			So Geschieht die Review dementsprechend vor dem Mergen mit dem Master-Branch.
 		\item Oder kann der Reviewer sich die Änderungen in Commits-Historie anschauen und bestimmte Code-Zeile kommentieren und den Autor erwähnen, indem er seinen Namen nach einem 
@@ -273,13 +273,13 @@ RhodCode bietet eine freie Edition „RhodeCode CE“ (Community Edition) sowie 
 \begin{description}
 	\item [Vorteile] \hfill
 		\begin{enumerate}
-			\item Hat alle Feature der RhodeCode CE im Abschnitt \ref{subsubsec:RhodeCode CE}.
+			\item Hat alle Feature der RhodeCode CE im \cref{subsubsec:RhodeCode CE}.
 			\item Die diffs lassen sich inline oder side-by-side angezeigt werden. 
 			\item Die Review unterstützt Live-Chat für das Quellcode vor Ort sowie Feedback in allen Repositories.
 			\item Regeln für Review stellen. z. B. Wer die Änderungen überprüfen kann.
 			\item Sperren von Repositories; Admins können Repositories sperren, so dass keine Änderungen mehr von anderen Benutzern in die Master-Branche gepusht sind.
 			\item Dateien, Projekte und Repositories ordnen, strukturieren und unbegrenzt \, verschachteln.
-			\item Unterstützt die Migration vom \ac{VCS} SVN zu Git.
+			\item Unterstützt die Migration vom \ac{VCS} \ac{SVN} zu Git.
 			\item RhodeCode EE unterstützt \ac{CI}/\ac{CD} Tools.
 			\item Volltextsuche nach Umgebungen mit sehr großen Codebasen. Es kann Terabyte von Daten verarbeiten.
 		\end{enumerate}
@@ -301,7 +301,7 @@ Github ist eine webbasiert Plattform für das Management vom Quelltext. Github a
 \begin{itemize}
 	\item \textbf{Art der Review}: \textit{pre- and post-commit}
 	\item \textbf{Entwickler}: Tom Preston-Werner, Chris Wanstrath, P. J. Hyett.
-	\item \textbf{Workflow}: Die Review funktioniert in Github durch eine Pull-Anfrage, wie beim Bitbuckets Workflow in \ref{subsec:Bitbucket} arbeitet der Entwickler an einem
+	\item \textbf{Workflow}: Die Review funktioniert in Github durch eine Pull-Anfrage, wie beim Bitbuckets Workflow in \cref{subsec:Bitbucket} arbeitet der Entwickler an einem
 		speziellen Branch, macht Änderungen und startet eine Pull-Anfrage und wählt die Reviewer, die eine Nachricht bekommen, dass sie zur Überprüfung gefragt sind. Nach Annahme der
 		Änderungen, können diese automatisch mit dem Master-Branch zusammengeführt werden.
 \end{itemize}
@@ -335,7 +335,7 @@ Die Kostenlose Variante für die Community.
 \begin{description}
 	\item [Vorteile:] \hfill
 	\begin{enumerate}
-		\item Enthält alles was die Kostenlose Variante \ref{subsubsec:Free} kann
+		\item Enthält alles was die Kostenlose Variante \cref{subsubsec:Free} kann
 		\item 3,000 Minuten im Monat für die Nutzung von Quellcode-Test-Tools für private Repositories
 		\item 2 GB Speicher für GitHub-Pakete
 		\item Informelle Pull-Anfragen starten, bevor man die formelle Überprüfung durchführt
