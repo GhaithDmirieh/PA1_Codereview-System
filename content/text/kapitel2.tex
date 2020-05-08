@@ -5,33 +5,68 @@
 \label{subsec:Definition}
 
 \begin{description}
-	\item [Codereview:] \hfill
-		Darunter versteht man ein Verfahren, das die Gelegenheit jemandem anderen anbietet, die Änderungen des Autors im Quelltext zu überprüfen. Es ist eine Art der Sicherheit, um 				Fehler zu vermeiden, jedoch nicht nur.
+	\item [Codereview:]
+		Darunter versteht man ein Verfahren, das die Gelegenheit jemandem anderen anbietet, die Änderungen des Autors im Quelltext zu überprüfen. Es ist eine Art der Sicherheit, um 				Fehler zu vermeiden, jedoch nicht nur. \change{Ändere die Definition}
 
-	\item [Version-Control-Systeme:] \hfill
-		\unsure{erwähne auch die Abkürzung}
+	\item [VCS:]
+		Version-Control-Systeme sind Softwaretools, mit deren Hilfe Softwareteams Quellcodeänderungen verwalten können. Ein Versionsverwaltungssystem verfolgt jede Änderung am Code und 			speichert sie in einer speziell hierfür angelegten Datenbank. Unterläuft einem Entwickler ein Fehler, kann er einen Schritt zurück machen, seinen Code mit früheren Codeversionen 		abgleichen und Korrekturen implementieren. Und das mit minimalen Beeinträchtigungen für seine Teamkollegen.\cite{Bitbucket}
 
-	\item [Git] \hfill
-		\unsure{kurze Erklärung}
+	\item [Git:]
+		Git ist eine freie und Open-Source Software zur Versionsverwaltung von Dateien, das 2005 ursprünglich von Linus Torvalds, dem berühmten Entwickler des Linux Betriebssystem-				Kernel, entwickelt wurde.
 	
-	\item [SVN]
-		\unsure{kurze Erklärung}
+	\item [SVN:]
+		Apache Subversion ist eine freie Software zur zentralen Versionsverwaltung von Dateien und Verzeichnissen. Die Versionierung erfolgt in einem zentralen Repository in Form einer  			Revisionszählung.
 	
-	\item [CVN]
-		\unsure{kurze Erklärung}
+	\item [CVN:]
+		\unsure{Keine eindeutige Definition. Frag Björn.}
 	
-	\item [Post-commit] \hfill
-		\unsure{Definition und vielleicht auch Vor- und Nachteile}
-	
-	\item [pre-commit] \hfill
-		\unsure{Definition und vielleicht auch Vor- und Nachteile}
-		
-	\item [pull-requests] \hfill
-		\unsure{Definition und vielleicht auch Vor- und Nachteile}	
-	
-	\item [\ac{CI}/\ac{CD}]
-		\unsure{Kurze Erklärung}
+	\item [Post-commit:]
+		Die Überprüfung erfolgt, nachdem die Änderungen am Quelltext an das Ziel-Repository gesendet wurde.
+		\begin{description}
+			\item [Vorteile:] \hfill
+			\begin{enumerate}
+				\item Andere Teammitglieder sehen die Codeänderungen und können ihre Arbeit entsprechend ändern
+				\item Dieser Prozess kann praktisch sein, weil einige Änderungen komplex und lang sein können und mehrere Schritte für den Review erfordern
+			\end{enumerate}
 			
+			\item[Nachteile:] \hfill
+			\begin{enumerate}
+				\item Erhöhte Wahrscheinlichkeit, dass schlechter Code in das Haupt Repository gelangt, was sich auf die Arbeit des gesamten Teams auswirkt
+				\item Wenn Fehler gefunden werden, kann es eine Weile dauern, bis der Entwickler zu dem Modul zurückkehrt, an dem er gearbeitet hat
+			\end{enumerate}
+		\end{description}
+		
+		
+	\item [pre-commit:]
+		Ist eine Art des Reviews, mit der man die Änderungen des Quelltextes überprüft, bevor die in das Haupt-Repository des Versionsverwaltungssystem gelangen.
+		\begin{description}
+			\item [Vorteile:] \hfill
+			\begin{enumerate}
+				\item Diese Art erstellt eine Art von Sicherheit, da fehlerhafte oder unvollständige Änderungen durch den Review auftreten können
+				\item Dieser Prozess stellt sicher, dass der Autor seine Änderungen überprüfen lässt und nicht direkt in das Ziel-Repository eincheckt
+			\end{enumerate}
+		\end{description}
+		
+	\item [Pull-Requests]
+		Anfrage erstellen und an die Reviewer abschicken um Änderungen am Code zu überprüfen. Meistens arbeitet der Entwickler an einem Zweig vom master-branch und sobald er fertig ist 			sendet er die Pull-Request an die Review. Wird eine Pull-Request akzeptiert, so spricht man von einem Merge, wird er geschlossen, so spricht man von einem Close.
+	
+	\item [CI/CD:] \footnote{Quelle: \cite{RedHat}} \hfill
+	\begin{enumerate}
+		\item Continuous Integration(CI):
+			Auf Deutsch Automatisierungsprozess. Bei einer erfolgreichen CI werden regelmäßig neue Codeänderungen geprüft und in einem gemeinsamen Repository zusammengeführt. Damit soll 			der Konflikt verhindert werden, den zu viele Branches eines Programms verursachen können, wenn sie zeitgleich entwickelt werden.
+		\item Continuous Delivery (CD): Bedeutet dass, Änderungen eines Entwicklers automatisch auf Bugs getestet und in ein Repository hochgeladen werden Dieser Vorgang ist die Antwort 			auf Transparenz- und Kommunikationsprobleme zwischen Dev- und Business-Teams. Damit soll sichergestellt werden, dass neuer Code mit minimalem Aufwand implementiert werden 					kann.
+		\item Continuous Deployment(CD):
+			CD kann sich auf die automatische Freigabe von Entwickleränderungen vom Repository zur Produktivphase beziehen, wo sie direkt vom Kunden genutzt werden können. Dieser 						Vorgang soll der Überlastung von Operations-Teams bei manuellen Prozessen entgegenwirken, die die Anwendungsbereitstellung verlangsamen. Continuous Development baut die 					Vorteile der Continuous Delivery aus, indem auch noch die nächste Phase der Pipeline automatisiert wird.
+	\end{enumerate}
+
+	Dieser Prozess kann als eine Pipeline vorgestellt werden, die die \cref{fig:RedHat} beschreibt.
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=1.0\textwidth]{Red Hat CI CD}
+		\caption[\ac{CI}/\ac{CD}]{\ac{CI}/\ac{CD} Prozess als Pipeline\\ Quelle:\cite{RedHat}}
+		\label{fig:RedHat}
+	\end{figure}
+	
 \end{description}
 
 \subsection{Warum überhaupt}
