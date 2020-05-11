@@ -50,14 +50,14 @@
 	\item [Pull-Requests]
 		Anfrage erstellen und an die Reviewer abschicken um Änderungen am Code zu überprüfen. Meistens arbeitet der Entwickler an einem Zweig vom master-branch und sobald er fertig ist 			sendet er die Pull-Request an die Review. Wird eine Pull-Request akzeptiert, so spricht man von einem Merge, wird er geschlossen, so spricht man von einem Close.
 	
-	\item [CI/CD:] \footnote{Quelle: \cite{RedHat}} \hfill
-	\begin{enumerate}
-		\item Continuous Integration(CI):
-			Auf Deutsch Automatisierungsprozess. Bei einer erfolgreichen CI werden regelmäßig neue Codeänderungen geprüft und in einem gemeinsamen Repository zusammengeführt. Damit soll 			der Konflikt verhindert werden, den zu viele Branches eines Programms verursachen können, wenn sie zeitgleich entwickelt werden.
-		\item Continuous Delivery (CD): Bedeutet dass, Änderungen eines Entwicklers automatisch auf Bugs getestet und in ein Repository hochgeladen werden Dieser Vorgang ist die Antwort 			auf Transparenz- und Kommunikationsprobleme zwischen Dev- und Business-Teams. Damit soll sichergestellt werden, dass neuer Code mit minimalem Aufwand implementiert werden 					kann.
-		\item Continuous Deployment(CD):
-			CD kann sich auf die automatische Freigabe von Entwickleränderungen vom Repository zur Produktivphase beziehen, wo sie direkt vom Kunden genutzt werden können. Dieser 						Vorgang soll der Überlastung von Operations-Teams bei manuellen Prozessen entgegenwirken, die die Anwendungsbereitstellung verlangsamen. Continuous Development baut die 					Vorteile der Continuous Delivery aus, indem auch noch die nächste Phase der Pipeline automatisiert wird.
-	\end{enumerate}
+	\item [Continuous Integration(CI):]
+		„ CI bedeutet Continuous Integration, also der Automatisierungsprozess für Entwickler. Bei einer erfolgreichen CI werden regelmäßig neue Codeänderungen für Apps entwickelt, 				geprüft und in einem gemeinsamen Repository zusammengeführt. Damit soll der Konflikt verhindert werden, den zu viele Branches einer App verursachen können, wenn sie zeitgleich 			entwickelt werden “ \cite{RedHat}
+			
+	\item [Continuous Delivery (CD):]
+		„ Continuous Delivery bedeutet üblicherweise, dass \, App-Änderungen eines Entwicklers automatisch auf Bugs getestet und in ein Repository (wie GitHub oder eine Container-Registry) 		hochgeladen werden, von wo aus sie vom Operations-Team in einer Live-Produktivumgebung bereitgestellt werden können. Dieser Vorgang ist die Antwort auf Transparenz- und 					Kommunikationsprobleme zwischen Dev- und Business-Teams. Damit soll sichergestellt werden, dass neuer Code mit minimalem Aufwand implementiert werden kann “ \cite{RedHat}
+		
+	\item [Continuous Deployment(CD):]
+		„ Continuous Deployment (das andere „CD“) kann sich auf die automatische Freigabe von Entwickleränderungen vom Repository zur Produktivphase beziehen, wo sie direkt vom Kunden 			genutzt werden können. Dieser Vorgang soll der Überlastung von Operations-Teams bei manuellen Prozessen entgegenwirken, die die Anwendungsbereitstellung verlangsamen. Continuous 		Development baut die Vorteile der Continuous Delivery aus, indem auch noch die nächste Phase der Pipeline automatisiert wird “ \cite{RedHat}
 
 	Dieser Prozess kann als eine Pipeline vorgestellt werden, die die \cref{fig:RedHat} beschreibt.
 	\begin{figure}[H]
