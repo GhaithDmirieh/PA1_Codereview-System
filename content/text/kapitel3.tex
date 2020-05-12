@@ -1,15 +1,59 @@
-\section{Der Einfluss von Codereview auf die Softwarequalität}
-\label{sec:rEinfluss}
-Smartbear \cite{smartbear} führte im Jahr 2019 mit 1100 Softwareentwickler/Tester, IT- / Betriebsfachleute und Führungskräfte in 35 verschiedenen Branchen eine Umfrage durch. Die Teilnehmer der Umfrage arbeiten in Unternehmen mit unterschiedlichen Größen, von weniger als 25 Mitarbeitern bis zu über 10.000.
+\section{Der Einfluss vom Codereview auf die Softwarequalität in den letzten Jahren}
+\label{sec:Einfluss des Reviews}
+Smartbear \cite{smartbear} führte im Jahr 2019 mit 1100 Softwareentwickler/Tester, IT- / Betriebsfachleute und Führungskräfte in 35 verschiedenen Branchen eine Umfrage durch. Die Teilnehmer der Umfrage arbeiten in Unternehmen mit unterschiedlichen Größen, von weniger als 25 Mitarbeitern bis zu über 10.000. Ähnliche Umfragen hat Smartbear regelmäßig durchgeführt.
 
-\subsection{Wirkung von Codereview in den letzten Jahren}
-\label{subsec:rWirkung}
+Seit 2016 haben die Befragten identifiziert, dass der Codereview die beste Methode zur Verbesserung der Codequalität ist. Die Unit Testing im Jahr 2019 wurde als zweithöchste Wahl betrachtet und die Daten in der selben Rangliste vom Jahr 2019 zeigen: 25\% der Befragten wählen erneut den Codereview, was in der \cref{fig:Codereview-Softwarequalität} zu sehen ist.
 
-\section{Zeit sparen oder in der Review investieren}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1.0\textwidth]{Codereview-Softwarequalität}
+	\caption[Einfluss der Codereview auf die Softwarequalität]{Codereview-Softwarequalität\\ \cite{smartbear}}
+	\label{fig:Codereview-Softwarequalität}
+\end{figure}
+
+Die Wahrnehmung des Codereviews als Schlüssel für eine bessere Softwarequalität wurde durch die Daten vom Jahr 2019 bestätigt \cite{smartbear}.\unsure{soll das Zitat auch hier stehen ?}
+
+
+\section{Zeit sparen oder im Review investieren}
 \label{sec:reviewZeit}
 
-\subsection{Wie oft soll der Programmierer für die Review Zeit nehmen ?}
+Wie im \cref{sec:Einfluss des Reviews} erwähnt, dass Codereview und Softwarequalität eng verbunden sind, so dass es sich lohnt, die Zeit für den Review zu nehmen, um die Qualität des Quelltexts zu verbessern, zeigt auch die Umfrage von Smartbear welche sind die wichtigsten Vorteile, die der Review mit sich bringt. Zwar ist das Auffinden von Fehlern die Hauptmotivation, jedoch kann dieser Prozess dabei helfen, die Kommunikation des Teams zu verbessern, das Wissen zu übertragen und die Standardisierung zu erhöhen \cite{smartbear}. 
+
+Die Folgende \cref{fig:Vorteile des Codereviews} stellt die Wichtigste Vorteile des Reviews dar.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1.0\textwidth]{Vorteile des Codereviews}
+	\caption[Vorteile des Codereviews]{Die wichtigsten Vorteile des Codereviews\\ \cite{smartbear}}
+	\label{fig:Vorteile des Codereviews}
+\end{figure}
+
+Die verbesserte Softwarequalität und die Wissensübertragung im gesamten Team sind seit 2015 die beiden wichtigsten Vorteile \cite{smartbear}.
+
+\subsection{Wie oft soll der Programmierer für den Review Zeit nehmen ?}
 \label{subsec:reviewerZeit}
+
+Laut der Umfrage von Smartbear (Erklärung im \cref{sec:Einfluss des Reviews}) \cite{smartbear}, \textbf{67\%} der Befragten nehmen mindestens wöchentlich am Review teil, während \textbf{42\%} überprüfen den Code täglich.
+
+\subsubsection{Die am häufigsten verwendete Methoden}
+\label{subsubsec:Die am häufigsten verwendete Methoden}
+
+Diese drei Methoden Ad-hoc, Meeting-basiert und Tool-basiert sind die gängigsten Ansätze zum Codereview (Die Erklärung dieser Methoden ist im \cref{subsec:Vorgehensmethoden} zu finden).
+Die entsprechende Daten von der Smartbears Umfrage \cite{smartbear} dieser Methoden verdeutlicht das Balkendiagramm auf der \cref{fig:ReviewZeit} 
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\textwidth]{ReviewZeit}
+	\caption[Reviews Zeit]{Die benötigte Zeit für den Review\\ \cite{smartbear}}
+	\label{fig:ReviewZeit}
+\end{figure}
+
+\begin{enumerate}
+	\item \textbf{49\%} der Befragten führen mindestens wöchentlich den Review durch Ad-hoc oder Over-the-Shoulder durch, davon sind \textbf{20\%}, die ihr Code auf diese Weise 					täglich überprüfen.
+	\item \textbf{44\%} der Befragten basiert ihren wöchentlichen Review auf Tools, davon sind \textbf{29\%}, die den Review mit Tools täglich machen.
+	\item \textbf{16\%} der Befragten organisieren ein Meeting wöchentlich für den Review, davon sind \textbf{3\%}, die den Review auf diese Weise täglich durchführen.
+\end{enumerate}
+
 
 \section{Codereview-Tools}
 \label{sec:Coderview-Tools}
@@ -23,6 +67,6 @@ Smartbear \cite{smartbear} führte im Jahr 2019 mit 1100 Softwareentwickler/Test
 \section{Hauptziel und andere Vorteile}
 \label{sec:Ziel}
 
-\subsection{Kriterien \& Erwartungen des System}
+\subsection{Kriterien \& Erwartungen des Systems}
 \label{sec:kriterien}
 \info{Nicht vergessen die Unterstützung von SVN ist ein Bonus}
