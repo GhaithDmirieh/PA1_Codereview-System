@@ -104,8 +104,50 @@ Es gibt verschiedene Verfahren von Reviews. Die am häufigsten benutzte Verfahre
 	\item Es wird für den Review keine Dokumentation erstellt.
 \end{itemize}
 
-\subsection{Mögliche Abläufe des Reviews}
-\label{sec:review abläufe}
+\subsection{Mögliche Git-Workflows}
+\label{sec:Git-Workflows}
+
+Git bietet die Möglichkeit, den Workflow an den Bedürfnisse des Teams anzupassen, daher gibt es unterschiedliche Workflows.
+Die Workflows:
+\begin{itemize}
+	\item Feature-Branch-Workflow
+	\item Git-flow-Workflow
+\end{itemize}
+werden hier vorgestellt.
+
+\subsubsection{Feature-Branch-Workflow}
+\label{subsubsec:Feature-Branch-Workflow}
+
+Ziel dieses Workflows, dass ein anderes Branch statt dem Master-Branch (Haupt-Branch) für die Entwicklung von Features und die Review verwendet.
+Ablauf: Vom Master-Branch wird einen Zweig erstellt, den der Entwickler zu seiner Arbeitskopie klont. So arbeitet er unabhängig von seinen Kollegen an einem bestimmten Feature und 		sobald er das Feature fertig hat, wird er seine Änderungen mit einem \code{push} in dem abgespaltenen Branch senden. Danach kann der Entwickler je nach Einstellungen des Systems den 	Review starten. Wird der Review z. B. mit einer Pull-Request gemacht werden, soll der Entwickler an dieser Stelle die Pull-Anfrage starten. So können sich die Reviewer die 				Änderungen anschauen, kommentieren und mit dem Autor diskutieren und am Ende diese Änderungen entweder annehmen oder ablehnen. Werden diese Änderungen angenommen, können direkt in 		das Master-Branch zusammengeführt werden \cite{Feature-Branch-Workflow}. Die \cref{fig:Forking-workflow} verdeutlicht diesen Prozess. 
+
+\textbf{Eigenschaften dieses Verfahrens:}
+\begin{itemize}
+	\item Entwickler arbeiten nicht direkt an dem Haupt-Branch, demzufolge stören sie einander nicht
+	\item Jedes Feature ist in einem Feature-Branch gekapselt
+\end{itemize}
+
+\subsubsection{Git-flow-Workflow}
+\label{subsubsec:Git-flow-Workflow}
+
+"`Der Git-flow-Workflow ist ein Git-Workflow, der von Vincent Driessen auf nvie veröffentlicht und bekannt gemacht wurde. Der Git-flow-Workflow definiert ein strenges Branching-Modell, das um den Release des Projekts konzipiert wurde. Dies bietet einen robusten Rahmen für das Management größerer Projekte.
+Git-flow ist hervorragend für Projekte mit einem Release-Zyklus nach Zeitplan geeignet. Mit diesem Workflow werden keine neuen Konzepte oder Befehle hinzugefügt, die nicht auch für 		den Feature-Branch-Workflow erforderlich sind. Stattdessen werden verschiedenen Branches sehr spezifische Rollen zugewiesen, und es wird genau festgelegt, wann und wie die 				Interaktion erfolgen soll. Zusätzlich zu feature-Branches werden einzelne Branches zum Vorbereiten, Warten und Erfassen von Releases verwendet. Dabei kannst du natürlich auch alle 		Vorteile von Feature-Branch-Workflows nutzen: Pull-Anfragen, isolierte Tests und eine effizientere Zusammenarbeit."' \cite{Git-flow-Workflow}
+
+Hier wird also ein anderes Branch (develp-Branch) zusätzlich zum Master-Branch betrachtet. Dieses Branch wird für die Entwicklung verantwortlich sein, indem auf dem Master-Branch 			nur die Versionen zu sehen sind. Die Features werden in abgespaltenen Branchs vom Develop-Branch entwickelt und mit dem develop-Branch nach einer erfolgreichem Pull-Anfrage 				zusammengeführt werden. Sind die Features auf dem develop-Branch soweit für eine neue Version, wird ein Release-Branch vom dvelop-Branch abgespalten, mit dem Release-Branch keine 			Features mehr von anderen Branchs zusammengeführt werden. Dieses Branch sagt einfach "Ich bin die neue Version". Falls das Release-Branch Fehler enthält, kann die Behebung dieser			Fehler wieder in einem anderen Branch geschehen und in das Release-Branch zusammengeführt werden. Funktioniert die Version einwandfrei, wird sie mit dem Master-Branch 						zusammengeführt. Die \cref{fig:Git-flow-Workflow} soll bei der Vorstellung von diesem Workflow helfen.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.9\textwidth]{Git-flow-Workflow}
+	\caption[Git-flow-Workflow]{Git-flow-Workflow.\\ \cite{Git-flow-Workflow}}
+	\label{fig:Git-flow-Workflow}
+\end{figure}
+	
+\textbf{Eigenschaften dieses Verfahrens:}
+\begin{itemize}
+	\item Dieser Workflow hat alle Eigenschaften des letzten Workflows im \ref{subsubsec:Feature-Branch-Workflow}
+	\item Eignet sich gut für große Projekte, die mehrere Versionen enthalten sollen
+	\item Dank des Develop-Branchs und der Release-Branchs hat das Master-Branch eine saubere Historie, da es auf dem Develop-Branchs statt dem Master-Branch entwickelt wird
+\end{itemize}
 
 \unsure{beschreibe die Workflows die du verwendest}
 \unsure{du kannst auch von here z. B. auf das Bild verweisen}
