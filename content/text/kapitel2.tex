@@ -6,16 +6,16 @@
 
 \begin{description}
 	\item [Codereview:]
-		Unter Codereview Versteht man, eine manuelle Überprüfung des Quellcodes durch andere Entwickler als den Autor. Es gilt als wertvolles Werkzeug zur Reduzierung von 							Softwarefehlern und zur Verbesserung der Qualität von Softwareprojekten \cite{bacchelli2013expectations}.\change{Die Definition ist in der Quelle auch zitiert, geht das ?}
+		Unter Codereview Versteht man, eine manuelle Überprüfung des Quellcodes durch andere Entwickler als den Autor. Es gilt als wertvolles Werkzeug zur Reduzierung von 							Softwarefehlern und zur Verbesserung der Qualität von Softwareprojekten \cite{bacchelli2013expectations}.
 
 	\item [VCS:]
-		Version-Control-Systeme sind Softwaretools, mit deren Hilfe Softwareteams Quellcodeänderungen verwalten können. Ein Versionsverwaltungssystem verfolgt jede Änderung am Code und 			speichert sie in einer speziell hierfür angelegten Datenbank. Unterläuft einem Entwickler ein Fehler, kann er einen Schritt zurück machen, seinen Code mit früheren Codeversionen 		abgleichen und Korrekturen implementieren. Und das mit minimalen Beeinträchtigungen für seine Teamkollegen.\cite{Bitbucket}
+		"`Versionskontrollsysteme sind Softwaretools, mit deren Hilfe Softwareteams Quellcodeänderungen verwalten können. Die Versionskontrollsoftware verfolgt jede Änderung am Code und 		speichert sie in einer speziell hierfür angelegten Datenbank. Unterläuft einem Entwickler ein Fehler, kann er einen Schritt zurück machen, seinen Code mit früheren Codeversionen 		abgleichen und Korrekturen implementieren. Und das mit minimalen Beeinträchtigungen für seine Teamkollegen."' \cite{version-control-System}
 
 	\item [Git:]
 		Git ist eine freie und Open-Source Software zur Versionsverwaltung von Dateien, das 2005 ursprünglich von Linus Torvalds, dem berühmten Entwickler des Linux Betriebssystem-				Kernel, entwickelt wurde.
 	
 	\item [SVN:]
-		Apache Subversion ist eine freie Software zur zentralen Versionsverwaltung von Dateien und Verzeichnissen. Die Versionierung erfolgt in einem zentralen Repository in Form einer  			Revisionszählung.
+		Apache Subversion ist eine freie Software zur zentralen Versionsverwaltung von Dateien und Verzeichnissen. Die Versionierung erfolgt in einem zentralen Repository in Form einer  		Revisionszählung.
 	
 	\item [CVN:]
 		\unsure{Keine eindeutige Definition. Frag Björn.}
@@ -47,17 +47,17 @@
 			\end{enumerate}
 		\end{description}
 		
-	\item [Pull-Requests]
+	\item [Pull-Request:]
 		Anfrage erstellen und an die Reviewer abschicken um Änderungen am Code zu überprüfen. Meistens arbeitet der Entwickler an einem Zweig vom master-branch und sobald er fertig ist 			sendet er die Pull-Request an die Review. Wird eine Pull-Request akzeptiert, so spricht man von einem Merge, wird er geschlossen, so spricht man von einem Close.
 	
 	\item [Continuous Integration(CI):]
-		„ CI bedeutet Continuous Integration, also der Automatisierungsprozess für Entwickler. Bei einer erfolgreichen CI werden regelmäßig neue Codeänderungen für Apps entwickelt, 				geprüft und in einem gemeinsamen Repository zusammengeführt. Damit soll der Konflikt verhindert werden, den zu viele Branches einer App verursachen können, wenn sie zeitgleich 			entwickelt werden “ \cite{RedHat}
+		"`CI bedeutet Continuous Integration, also der Automatisierungsprozess für Entwickler. Bei einer erfolgreichen CI werden regelmäßig neue Codeänderungen für Apps entwickelt, 				geprüft und in einem gemeinsamen Repository zusammengeführt. Damit soll der Konflikt verhindert werden, den zu viele Branches einer App verursachen können, wenn sie zeitgleich 			entwickelt werden."' \cite{RedHat}
 			
 	\item [Continuous Delivery (CD):]
-		„ Continuous Delivery bedeutet üblicherweise, dass \, App-Änderungen eines Entwicklers automatisch auf Bugs getestet und in ein Repository (wie GitHub oder eine Container-Registry) 		hochgeladen werden, von wo aus sie vom Operations-Team in einer Live-Produktivumgebung bereitgestellt werden können. Dieser Vorgang ist die Antwort auf Transparenz- und 					Kommunikationsprobleme zwischen Dev- und Business-Teams. Damit soll sichergestellt werden, dass neuer Code mit minimalem Aufwand implementiert werden kann “ \cite{RedHat}
+		"`Continuous Delivery bedeutet üblicherweise, dass App Änderungen eines Entwicklers automatisch auf Bugs getestet und in ein Repository (wie GitHub oder eine Container 					Registry) hochgeladen werden, von wo aus sie vom Operations-Team in einer Live-Produktivumgebung bereitgestellt werden können. Dieser Vorgang ist die Antwort auf Transparenz- 				und Kommunikationsprobleme zwischen Dev- und Business-Teams. Damit soll sichergestellt werden, dass neuer Code mit minimalem Aufwand implementiert werden kann."' \cite{RedHat}
 		
 	\item [Continuous Deployment(CD):]
-		„ Continuous Deployment (das andere „CD“) kann sich auf die automatische Freigabe von Entwickleränderungen vom Repository zur Produktivphase beziehen, wo sie direkt vom Kunden 			genutzt werden können. Dieser Vorgang soll der Überlastung von Operations-Teams bei manuellen Prozessen entgegenwirken, die die Anwendungsbereitstellung verlangsamen. Continuous 		Development baut die Vorteile der Continuous Delivery aus, indem auch noch die nächste Phase der Pipeline automatisiert wird “ \cite{RedHat}
+		"`Continuous Deployment (das andere „CD“) kann sich auf die automatische Freigabe von Entwickleränderungen vom Repository zur Produktivphase beziehen, wo sie direkt vom Kunden 			genutzt werden können. Dieser Vorgang soll der Überlastung von Operations-Teams bei manuellen Prozessen entgegenwirken, die die Anwendungsbereitstellung verlangsamen. Continuous 		Development baut die Vorteile der Continuous Delivery aus, indem auch noch die nächste Phase der Pipeline automatisiert wird."' \cite{RedHat}
 
 	Dieser Prozess kann als eine Pipeline vorgestellt werden, die die \cref{fig:RedHat} beschreibt.
 	\begin{figure}[H]
