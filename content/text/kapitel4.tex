@@ -11,41 +11,40 @@ Bitbucket ist ein Quellcode-Management-System der das \ac{VCS} Git unterstützt.
 	\item \textbf{Art der Review}: \textit{pre- and post-commit} Und die erfolgt durch eine Pull-Anfrage.
 	\item \textbf{Entwickler}: Bitbucket wurde 2007 vom Jesper Nøhr entwickelt und 2010 von Atlassian \footnote{\url{https://bitbucket.org/}}
 		 gekauft. 
-	\item \textbf{Reviews Workflow}: Eine Pull-Request kann in 3 verschiedenen Weisen gemacht werden:
+	\item \textbf{Reviews Workflow}: Eine Pull-Request kann verschiedenen Weisen gemacht werden z. B.:
 		\begin{itemize}
-			\item Feature-Branch-Workflow.
-			\item Git-flow-Workflow.
-			\item Forking-Workflow.
-			\change{verweise auf die erklärung}
+			\item Feature-Branch-Workflow: Erklärung im \cref{sec:Git-Workflows}
+			\item Git-flow-Workflow: Erklärung im \cref{sec:Git-Workflows}
+			\item Zentraler Workflow
 		\end{itemize}
 \end{itemize}
 
-Die \cref{fig:Forking-workflow} zeigt die Forking-Workflow mit Pull-Anfrage.
+Die \cref{fig:Forking-workflow} zeigt die Feature-Branch-Workflow mit Pull-Anfrage.
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=1.0\textwidth]{Bitbucket_Forking-Workflorw}
-	\caption[Bitbuckets Ablauf]{Pull-Request.\\  eigene Darstellung}
+	\includegraphics[width=1.0\textwidth]{bitbucket_Forking-Workflorw}
+	\caption[Feature-Branch-Workflow]{Pull-Request.\\Eigene Darstellung}
 	\label{fig:Forking-workflow}
 \end{figure}		  
 
 \begin{description}
-	\item [Vorteile:] \hfill
-	\begin{enumerate}
+	\item [Bitbuckets Vorteile:] \hfill
+	\begin{itemize}
 		\item Unbegrenzte Anzahl von private Repositories.
 		\item Hosting in Cloud oder auf eigenem Server.
 		\item \ac{CI}/\ac{CD} sind in Bitbucket integriert.
 		\item Erstellen von einer Merge-Checkliste mit zugeordneten Genehmigern.
 		\item Für kleine Teams bis 5 Personen bestehen keine Kosten für das Hosten auf Bitbuckets Server.
-	\end{enumerate}
+	\end{itemize}
 	
-	\item [Nachteile:] \hfill
-	\begin{enumerate}
+	\item [Bitbuckets Nachteile:] \hfill
+	\begin{itemize}
 		\item Es besteht keine Möglichkeit, um bestehende gemergte commits zu reviewen.
 		\item Review ist nur vor dem Zusammenführen von einem Feature-Branch mit dem Master-Branch Möglich.
 		\item Um zu hosten auf Bitbucketsever steht für mehr als 5 Personen einen monatlichen Beitrag und für Self-hosten (auf eigenem Server) besteht eine einmalige Zahlung. Der 
 			Preis für beide Varianten variiert je nach Personenanzahl.
-	\end{enumerate}
+	\end{itemize}
 \end{description}
 
 \subsection{Crucible}
@@ -92,20 +91,20 @@ Crucible ist eine webbasierte Anwendung, die eine unkomplizierte, formelle Coder
 
 \begin{description}
 	\item [Crucibles Vorteile:] \hfill
-	\begin{enumerate}
+	\begin{itemize}
 		\item Review des Inhalts ist flexibel.
 		\item Diskussionsrunden um in Bestimmten Quelltextzeilen oder ein bestimmtes Commit sowie einen gesamten Änderungssatz zu Kommentieren.
 		\item Nachverfolgen, Maßnahmen ergreifen in Bezug auf das, was der Autor wichtig findet.
 		\item Ansicht vom Reviewstatus und wer möglicherweise Überprüfungen aufhält.
 		\item Berichte über Stellen im Quelltext, die noch nicht überprüft wurden.
 		\item unterstützt nicht nur Git sonder \ac{SVN} auch.
-	\end{enumerate}
+	\end{itemize}
 	
 	\item [Crucibles Nachteile:] \hfill
-	\begin{enumerate}
+	\begin{itemize}
 		\item Die Review muss manuell in Git eingefügt werden(Mergen ist nicht möglich).
 		\item Schwer zu erzwingen.
-	\end{enumerate}
+	\end{itemize}
 \end{description}
 
 \subsection{Helix TeamHub}
@@ -129,7 +128,7 @@ Helix TeamHub ist eine webbasierte Plattform, die Hosten und Management von Repo
 
 \begin{description}
 	\item [Vorteile:] \hfill
-	\begin{enumerate}
+	\begin{itemize}
 		\item Workflows sind flexibel, so dass die Administratoren diese einrichten können.
 		\item Schnelle Übersicht über alle Branchs eines Repositorys.
 		\item Zugriffsverwaltung, so kann sich der Admenstrator entscheiden, wer an einem repository arbeitet und welche Rechte hat.
@@ -138,14 +137,14 @@ Helix TeamHub ist eine webbasierte Plattform, die Hosten und Management von Repo
 		\item Mergen von Reviews erfolgt automatisch.
 		\item Helix Teamhub unterstützt \ac{CI}/\ac{CD} Tools.
 		\item Kostenlos für Teams bis 5 Mitglieder.
-	\end{enumerate}
+	\end{itemize}
 	
 	\item [Nachteile:] \hfill
-	\begin{enumerate}
+	\begin{itemize}
 	\item Für die kostenlose Variante steht totale Speichergröße von 1GB in Cloud zu Verfügung.
 	\item Hosten auf eigenem Server ist nicht möglich.
 	\item Die Abspeicherung von Daten auf dem Server variiert je nach dem jährlichen Beitrag.
-	\end{enumerate}
+	\end{itemize}
 \end{description}
 
 
@@ -159,7 +158,7 @@ Gerrit ist ein \ac{CRS}, das sich von den anderen \acp{CRS} stark unterscheidet.
 	\item \textbf{Entwickler}: Google.
 	\item \textbf{Workflow}: Gerrit hat nur einen Ablauf für den Review, der nach diesen Schritten erfolgt:
 		\begin{enumerate}
-			\item Projekt für das Repository erstellen. Für die Erstellung vom Gerrit-Projekt gibt es 4 Methoden:
+			\item Projekt für das Repository erstellen. Für die Erstellung vom Gerrit-Projekt gibt es 4 Methoden :\change{Verweise auf die Erklärung dieser Methoden}
 			\begin{itemize}
 				\item Direkt im Gerrits Web-Plattform.
 				\item via REST endpoint
@@ -177,7 +176,7 @@ Gerrit ist ein \ac{CRS}, das sich von den anderen \acp{CRS} stark unterscheidet.
 				\item Reviewer hinzufügen.
 				\item Kommentare, Anmerkungen an bestimmten Code-Zeilen für die Reviewer hinterlassen.
 			\end{itemize}
-			Die \cref{fig:Gerrit-Reviews Webseite} soll einen allgemeinen Überblick über die Webseite, in der den Review gestartet wird, geben.
+			Die \cref{fig:Gerrit-Reviews Webseite} soll einen allgemeinen Überblick über die Webseite, in der den Review gestartet wird, geben.\change{Eigenes Screenshot kommt bald}
 			
 			\begin{figure}[H]
 				\centering
@@ -185,8 +184,7 @@ Gerrit ist ein \ac{CRS}, das sich von den anderen \acp{CRS} stark unterscheidet.
 				\caption[Gerrit: Reviews Webseite]{Reviews Webseite,\\ \cite{Gerrit}}
 				\label{fig:Gerrit-Reviews Webseite}
 			\end{figure}
-			\change{Eigenes Screenshot kommt bald}
-						
+			
 			\item Die Reviewer können entweder die Review manuell finden oder bekommen die eine E-Mail (wenn sie vom Autor als Reviewer gemerkt sind), dass eine Review
 				 gestartet wurde. Die Reviewer schauen die Änderungen, antworten auf sie und am Ende bewerten sie. Die Bewertung ist in Gerrit vorgeschrieben.
 				 Dann passiert Folgendes:
@@ -206,9 +204,11 @@ Gerrit ist ein \ac{CRS}, das sich von den anderen \acp{CRS} stark unterscheidet.
 		
 \end{itemize}
 
+\unsure{nicht erwünscht und erwünscht statt vor- und Nachteile ? Die Kriterien kommen bald}
+
 \begin{description}
 	\item [Gerrits Vorteile:] \hfill
-	\begin{enumerate}
+	\begin{itemize}
 		\item Gerrit kann multiple Repositories beaufsichtigen.
 		\item Clean history \unsure{Erkläre warum (git push --f)}
 		\item Jedes Repository kann unendliche Anzahl von Branchs enthalten.
@@ -216,14 +216,14 @@ Gerrit ist ein \ac{CRS}, das sich von den anderen \acp{CRS} stark unterscheidet.
 		\item \ac{CI}/\ac{CD} können in den Workflow eingebaut werden.
 		\item Benutzerfreundliche Webschnittstelle zum Reviewen.
 		\item Kostenlos \& Open-Source-Projekt.
-	\end{enumerate}
+	\end{itemize}
 	
 	\item [Gerrits Nachteile:] \hfill
-	\begin{enumerate}
+	\begin{itemize}
 		\item Mit Gerrit ist die Review und das Testen der neuen Änderungen Pflicht.
 		\item Nur Administratoren können Projekte in Gerrit hinzufügen.
 		\item Gerrit arbeitet ausschließlich mit Git.
-	\end{enumerate}
+	\end{itemize}
 \end{description}
 
 \subsection{RhodCode}
@@ -271,7 +271,7 @@ RhodCode bietet eine freie Edition „RhodeCode CE“ (Community Edition) sowie 
 
 \begin{description}
 	\item [Vorteile] \hfill
-		\begin{enumerate}
+		\begin{itemize}
 			\item Hat alle Feature der RhodeCode CE im \cref{subsubsec:RhodeCode CE}.
 			\item Die diffs lassen sich inline oder side-by-side angezeigt werden. 
 			\item Die Review unterstützt Live-Chat für das Quellcode vor Ort sowie Feedback in allen Repositories.
@@ -281,19 +281,19 @@ RhodCode bietet eine freie Edition „RhodeCode CE“ (Community Edition) sowie 
 			\item Unterstützt die Migration vom \ac{VCS} \ac{SVN} zu Git.
 			\item RhodeCode EE unterstützt \ac{CI}/\ac{CD} Tools.
 			\item Volltextsuche nach Umgebungen mit sehr großen Codebasen. Es kann Terabyte von Daten verarbeiten.
-		\end{enumerate}
+		\end{itemize}
 	\item [Nachteile] \hfill
-		\begin{enumerate}
+		\begin{itemize}
 			\item Verfügbar nur für mindestens 10 Benutzer mit einem jährlichen Beitrag von 75\$ pro Benutzer.
 			\item Kein open-source Projekt.
 			\item Hosting geht nur auf eigenem Server.
-		\end{enumerate}
+		\end{itemize}
 \end{description}
 
 \unsure{RhodeCode Cloud (Beta) ?}
 
 \subsection{Github}
-\label{Github}
+\label{subsec:Github}
 
 Github ist eine webbasiert Plattform für das Management vom Quelltext. Github arbeitet ausschließlich mit dem \ac{VCS} Git. Es bietet die Gelegenheit, unbegrenzte Anzahl von public/private Repositories (Private Repositories erst seit 8. Januar 2019) auf Githubs Server zu hosten. Außerdem gehört Github seit Juni. 2018 Microsoft.
 
@@ -320,19 +320,19 @@ Davon werden nur 2 vorgestellt:
 Die Kostenlose Variante für die Community.
 \begin{description}
 	\item [Vorteile:] \hfill
-	\begin{enumerate}
+	\begin{itemize}
 		\item Seit 14.~April 2020 kann unbegrenzte Anzahl von Benutzern nicht nur an öffentlichen Repositories zusammenarbeiten sondern auch an privaten Repositories.
 		\item Kostenlose Nutzung von Quellcode-Test-Tools(\ac{CI}/\ac{CD}) für die öffentlichen Repositories und 2000 Minuten im Monat für private Repositories
 		\item 500 MB Speicher für GitHub-Pakete und unbegrenzte Speicher für öffentliche Repositories
 		\item Codereview-Tools: Änderungsvergleich anzeigen lassen, Pull-Anfragen
 		\item Automatisches Zusammenführen nach Genehmigung der Review
-	\end{enumerate}
+	\end{itemize}
 	\item [Nachteile:] \hfill
-	\begin{enumerate}
+	\begin{itemize}
 		\item Einschränkungen auf Branchen sind nicht möglich
 		\item Die Review kann nicht auf bestimmte Benutzer beschränkt werden
 		\item Öffentliche Repositories haben mehr Features als die private Repositories
-	\end{enumerate}
+	\end{itemize}
 \end{description}
 
 \subsubsection{Github Team}
@@ -340,7 +340,7 @@ Die Kostenlose Variante für die Community.
 
 \begin{description}
 	\item [Vorteile:] \hfill
-	\begin{enumerate}
+	\begin{itemize}
 		\item Enthält alles was die Kostenlose Variante \cref{subsubsec:Free} kann
 		\item 3,000 Minuten im Monat für die Nutzung von Quellcode-Test-Tools für private Repositories
 		\item 2 GB Speicher für GitHub-Pakete
@@ -348,13 +348,14 @@ Die Kostenlose Variante für die Community.
 		\item Einschränkungen für das Zusammenführen von Branchen erzwingen
 		\item Anforderung zur Review durch ausgewählte Benutzer
 		\item Rechte für die Branchen geben, so können nur bestimmte Benutzer an einer bestimmten Branche arbeiten
-	\end{enumerate}
+	\end{itemize}
 	\item [Nachteile:] \hfill
-	\begin{enumerate}
+	\begin{itemize}
 		\item Monatlichen Beitrag in Höhe von 4\$ pro Benutzer
 		\item Hosten auf eigenem Server ist in diesem Paket nicht erhältlich
-	\end{enumerate}
+	\end{itemize}
 \end{description}
 
 Außerdem hat Github eine Desktop-Anwendung, mit der verschiedene Operationen wie (Diffs anzeigen, fetchen, mergen, pushen) ohne Command-line durchgeführt werden können.
 
+\unsure{Vergleichstabelle kommt bald}
