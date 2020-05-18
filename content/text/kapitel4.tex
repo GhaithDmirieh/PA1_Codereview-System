@@ -357,4 +357,30 @@ Die Kostenlose Variante für die Community.
 
 Außerdem hat Github eine Desktop-Anwendung, mit der verschiedene Operationen wie (Diffs anzeigen, fetchen, mergen, pushen) ohne Command-line durchgeführt werden können.
 
-\unsure{Vergleichstabelle kommt bald}
+\subsection{Vergleich der vorgeschlagenen Systeme}
+\label{subsec:Vergleichstabelle}
+
+Die Vorgeschlagene Systeme arbeiten hauptsächlich mit dem \ac{VCS} Git und unterstützen alle \ac{CI}/\ac{CD} Tools, haben also Gemeinsamkeiten, jedoch unterscheiden sie sich in anderen Punkten, die in der Tabelle \ref{tab:Vergleichstabelle aller Systeme} dargestellt sind.
+
+\begin{table}[h]
+	\caption[Vergleichstabelle der vorgeschlagenen Systeme]{Vergleich der vorgeschlagenen Systeme}
+	\centering
+	\begin{scriptsize}
+		\begin{tabular}{|c|c|c|c|c|c|c|}
+			\hline 
+			Systeme & \textbf{Bitbucket} & \textbf{Crucible} & \textbf{Helix Teamhub} & \textbf{Gerrit} & \textbf{RhodeCode} & \textbf{Github} \\ 
+			\hline 
+			\textbf{\color{blue}{VCS}} & Git & Git \& \ac{SVN} & Git \& \ac{SVN} & Git & Git & Git \\ 
+			\hline 
+			\textbf{\color{blue}{Self-hosten}} & \color{green}{\ja} & \color{green}{\ja} & \color{red}{\nein} &\color{green}{\ja} & \color{green}{\ja} & 			\color{red}{\nein} \\ 
+			\hline 
+			\textbf{\color{blue}{Hosten in Cloud}} & \color{green}{\ja} & \color{red}{\nein} & \color{green}{\ja} & \color{red}{\nein} & \color{red}					{\nein} & \color{green}{\ja} \\ 
+			\hline 
+			\textbf{\color{blue}{Workflow}} & Pull-Request & flexibel & flexibel & Gerrits branch & flexibel & Pull-Request \\ 
+			\hline 
+			\textbf{\color{blue}{\ac{CI}/\ac{CD} Tools}} & \color{green}{\ja} & \color{green}{\ja} & \color{green}{\ja} & \color{green}{\ja} & 							\color{green} {\ja} & \color{green}{\ja} \\ 
+			\hline
+		\end{tabular}
+	\end{scriptsize}
+	\label{Tab:Vergleichstabelle aller Systeme}
+\end{table}
