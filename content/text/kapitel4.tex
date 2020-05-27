@@ -4,11 +4,11 @@
 \subsection{Bitbucket}
 \label{subsec:Bitbucket}
 
-Bitbucket ist ein Quellcode-Management-System der das \ac{VCS} Git unterstützt. Bitbucket unterstützte nach seinem Entwurf als \ac{VCS} nur Mercurial. Erst 3 Jahren später wurde um die Unterstützung von Git erweitert. Am 1. Juni 2020 wurde die Unterstützung von Mercurial vollständig eingestellt.
+Bitbucket\footnote{\url{https://web.archive.org/web/20200507010219/https://bitbucket.org/}} ist ein Quellcode-Management-System der das \ac{VCS} Git unterstützt. Bitbucket unterstützte nach seinem Entwurf als \ac{VCS} nur Mercurial. 3 Jahren später wurde um die Unterstützung von Git erweitert. Am 1. Juni 2020 wurde die Unterstützung von Mercurial vollständig eingestellt.
 
 \begin{itemize}
 	\item \textbf{Art des Reviews}: \textit{pre- and post-commit} Und die erfolgt durch eine Pull-Anfrage.
-	\item \textbf{Entwickler}: Bitbucket wurde 2007 vom Jesper Nøhr entwickelt und 2010 von Atlassian \footnote{\url{https://web.archive.org/web/20200507010219/https://bitbucket.org/}}
+	\item \textbf{Entwickler}: Bitbucket wurde 2007 vom Jesper Nøhr entwickelt und 2010 von Atlassian
 		 gekauft. 
 	\item \textbf{Reviews Workflow}: Eine Pull-Request kann verschiedenen Weisen gemacht werden z. B.:
 		\begin{itemize}
@@ -49,7 +49,7 @@ Die \cref{fig:Forking-workflow} zeigt die Feature-Branch-Workflow mit Pull-Anfra
 \subsection{Crucible}
 \label{subsec:Crucible}
 
-Crucible ist eine webbasierte Anwendung, die einen unkomplizierten, formellen Codereview anbietet. Sie unterstützt die \acp{VCS} \ac{SVN}, Git, Mercurial, perforce.
+Crucible ist eine webbasierte Anwendung, die einen formellen Codereview anbietet. Sie unterstützt die \acp{VCS} \ac{SVN}, Git, Mercurial, perforce.
 
 \begin{itemize}
 	\item \textbf{Art des Reviews}: \textit{pre- and post-commit}
@@ -96,7 +96,7 @@ Crucible ist eine webbasierte Anwendung, die einen unkomplizierten, formellen Co
 		\item Nachverfolgen, Maßnahmen ergreifen in Bezug auf das, was der Autor wichtig findet.
 		\item Ansicht vom Reviewstatus und wer möglicherweise Überprüfungen aufhält.
 		\item Berichte über Stellen im Quelltext, die noch nicht überprüft wurden.
-		\item unterstützt nicht nur Git sonder \ac{SVN} auch.
+		\item unterstützt nicht nur Git sonder unterstützt auch \ac{SVN}
 	\end{itemize}
 	
 	\item [Crucibles Nachteile:] \hfill
@@ -114,13 +114,13 @@ Helix TeamHub ist eine webbasierte Plattform, die Hosten und Management von Repo
 \begin{itemize}
 	\item \textbf{Art des Reviews}: \textit{pre- and post-commit}.
 	\item \textbf{Entwickler}: Perforce. 
-	\item \textbf{Reviews Workflow}: Der Review kann in Helix Teamhub eingerichtet werden, so kann das Mitglied, das der Review erstellte, entscheidet, wer die Reviewer
+	\item \textbf{Reviews Workflow}: Der Review kann in Helix Teamhub eingerichtet werden, so kann das Mitglied, das der Review erstellte, entscheiden, wer die Reviewer
 		 sind und welche Änderungen in welchem Branch überprüft werden sollen.
 		 Ein Beispiel für einen möglichen Workflow:
 		 
 		  Git-Feature-Branch-Workfow: Der Ablauf ähnelt sich dem Feature-Branch Workflow von Bitbucket im \cref{subsec:Bitbucket}.
 		  Es wird zuerst ein Projekt erstellt und zu diesem Projekt wird ein Repository hinzugefügt. Durch Git wird ein Branch in diesem Repository
-		  erstellt. Der Entwickler arbeitet an diesem Branch. Sobald er einen Review braucht, erstellt er eine. In den Einstellungen sucht man den Branch aus, dann werden Reviewer
+		  erstellt. Der Entwickler arbeitet an diesem Branch. Sobald er einen Review braucht, erstellt er einen. In den Einstellungen sucht man den Branch aus, dann werden Reviewer
 		  ausgewählt. Im Review sind die Kommentare auf Zeilenebene möglich. So bekommt der Autor Antworten und Verbesserungsvorschläge. Sobald der Review fertig ist,
 		  können die Änderungen automatisch in den Master Branch zusammengeführt werden, was sich durch einen Klick erfolgen lässt. 
 \end{itemize}
@@ -164,12 +164,12 @@ Gerrit ist ein \ac{CRS}, das sich von den anderen \acp{CRS} stark unterscheidet.
 				\item via SSH command
 				\item Manuell durch git
 			\end{itemize}
-			Hinweis: Nicht jeder Benutzer kann ein Gerrits Projekt erstellen, denn das braucht Administratorrechte.		
+			Bei Gerrit kann nicht jeder Benutzer ein Projekt erstellen, sondern nur die Administrator des Projekts.		
 			
-			\item Features entwickeln, dann die commiten und pushen. In diesem Fall pusht man die Änderungen nicht in den Master Branch, sondern in einen Gerrits Branchen.
+			\item Features entwickeln, dann die commiten und pushen. In diesem Fall pusht man die Änderungen nicht in den Master Branch, sondern in einen Gerrit Branch.
 				Gerrit benutzt Dieser Branch für den Review. Dementsprechend kommt man mit \textit{git diff} (git Befehl, um alte und neue Änderungen zu vergleichen) zum Vergleich
 				zwischen den Änderungen im Arbeitsverzeichnis und den Änderungen auf der Gerrits Branche.
-			\item Nach pushen wird einen Link erzeugt, den zur Webseite führt. Auf dieser Webseite kann der Autor: 
+			\item Nach dem pushen wird einen Link erzeugt, der zur Webseite führt. Auf dieser Webseite kann der Autor: 
 			\begin{itemize}
 				\item Diffs anzeigen lassen.
 				\item Reviewer hinzufügen.

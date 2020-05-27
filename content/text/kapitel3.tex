@@ -2,7 +2,7 @@
 \label{sec:Einfluss des Reviews}
 Smartbear \cite{smartbear} führte im Jahr 2019 mit 1100 Softwareentwickler/Tester, IT- / Betriebsfachleute und Führungskräfte in 35 verschiedenen Branchen eine Umfrage durch. Die Teilnehmer der Umfrage arbeiten in Unternehmen mit unterschiedlichen Größen, von weniger als 25 Mitarbeitern bis zu über 10.000. Ähnliche Umfragen hat Smartbear regelmäßig durchgeführt.
 
-Seit 2016 haben die Befragten identifiziert, dass der Codereview die beste Methode zur Verbesserung der Codequalität ist. Die Unit Testing im Jahr 2019 wurde als zweithöchste Wahl betrachtet und die Daten in der selben Rangliste vom Jahr 2019 zeigen: 25\% der Befragten wählen erneut den Codereview, was in der \cref{fig:Codereview-Softwarequalität} zu sehen ist.
+Seit 2016 haben die Befragten identifiziert, dass der Codereview die beste Methode zur Verbesserung der Codequalität ist. Das Unit Testing im Jahr 2019 wurde als zweithöchste Wahl betrachtet und die Daten in der selben Rangliste vom Jahr 2019 zeigen: 25\% der Befragten wählen erneut den Codereview, was in der \cref{fig:Codereview-Softwarequalität} zu sehen ist.
 
 \begin{figure}[H]
 	\centering
@@ -33,7 +33,7 @@ Die verbesserte Softwarequalität und die Wissensübertragung im gesamten Team s
 \subsection{Wie oft soll der Programmierer für den Review Zeit nehmen ?}
 \label{subsec:reviewerZeit}
 
-Laut der Umfrage von Smartbear (Erklärung im \cref{sec:Einfluss des Reviews}) \cite{smartbear}, \textbf{67\%} der Befragten nehmen mindestens wöchentlich am Review teil, während \textbf{42\%} überprüfen den Code täglich.
+Laut der Umfrage von Smartbear (Siehe \cref{sec:Einfluss des Reviews}) \textbf{67\%} der Befragten nehmen mindestens wöchentlich am Review teil, während \textbf{42\%} überprüfen den Code täglich.
 
 \subsubsection{Die am häufigsten für den Review verwendeten Methoden}
 \label{subsubsec:Die am häufigsten verwendete Methoden}
@@ -58,11 +58,11 @@ Die entsprechende Daten von der Smartbears Umfrage \cite{smartbear} dieser Metho
 \section{Codereview-Tools}
 \label{sec:Coderview-Tools}
 
-Es gibt 4 Bereiche, mit denen Entwickler ihre Code überprüfen.
+Es gibt 4 Bereiche, mit ihren Entwicklern ihre Code überprüfen.
 
 \begin{itemize}
-	\item \textbf{Repository-Verwaltungstools:} Diese Tools sind für die Verwaltung von Repositories zuständig. Entwickler können den Review durchführen, indem sie Pull-Anfrage an 				Teammitglieder senden oder auch durch andere Verfahren wie der Fall bei Helix Teamhub im \cref{subsec:HelixTeamHub}.
-		Beispiele dafür sind z. B. :
+	\item \textbf{Repository-Verwaltungstools:} Diese Tools sind für die Verwaltung von Repositories zuständig. Entwickler können den Review durchführen, indem sie das Pull Request an 				Teammitglieder senden oder auch durch andere Verfahren wie der Fall bei Helix Teamhub im \cref{subsec:HelixTeamHub}.
+		Beispiele dafür sind z.B.:
 		\begin{itemize}
 			\item Bitbucket \cref{subsec:Bitbucket}
 			\item Github \cref{subsec:Github}
@@ -70,7 +70,7 @@ Es gibt 4 Bereiche, mit denen Entwickler ihre Code überprüfen.
 		
 		Smartbears Umfrage zufolge verwenden \textbf{69\%} der Befragten Repository-Tools als Teil ihres Codereviews, unabhängig davon, ob sie den Review durch eine Pull-Anfrage 					durchführen oder in ein spezielles Peer-Codereview-Tool oder statisches Analysetool integrieren. Das bildet ein deutlicher Anstieg von \textbf{42\%} im Jahr 2018 							\cite{smartbear}.
 
-	\item \textbf{IDEs:} Manche IDEs wie z. B Visual Studio\footnote{https://web.archive.org/web/20200507024443/https://visualstudio.microsoft.com/de/} bieten die Möglichkeit, direkt in 		der Umgebung den Review zu starten
+	\item \textbf{IDEs:} Manche IDEs wie z.B. Visual Studio\footnote{https://web.archive.org/web/20200507024443/https://visualstudio.microsoft.com/de/} bieten die Möglichkeit, direkt in 		der Umgebung den Review zu starten
 
 	\item \textbf{Statische Analysetools:} Ein Beispiel dafür ist SonarQube\footnote{https://web.archive.org/web/20200508113558/https://www.sonarqube.org/}. Es ist eine Plattform, die 			automatisierte Regeln für die statische Code-Analyse definieren und benachrichtigt den Entwickler von seiner Pull-Anfrage, die durch Repository-Verwaltungstools erstellt wurden.
 
@@ -80,7 +80,7 @@ Es gibt 4 Bereiche, mit denen Entwickler ihre Code überprüfen.
 \subsection{Codereview-System}
 \label{subsec:CRS}
 
-Ein Codereview-System ist ein allgemeiner Begriff, der ein Tool beschreibt, das fähig ist, einen Codereview durchzuführen und diesen Review zu steuern. Dieses System kann ein Repository-Verwaltungstool, Statisches Analysetool, IDE oder ein Peer-Codereview-Tool sein, die im \cref{sec:Coderview-Tools} erläutert sind. Beispiele dafür sind im \cref{sec:CRS-Git}.
+Ein Codereview-System ist ein allgemeiner Begriff, der ein Tool beschreibt, das fähig ist, die Entwickler die Möglichkeit anbietet Codereview durchführen zu können und diesen Review zu steuern. Dieses System kann ein Repository-Verwaltungstool, Statisches Analysetool, IDE oder ein Peer-Codereview-Tool sein. Beispiele dafür sind im \cref{sec:CRS-Git}.
 
 \section{Hauptziel}
 \label{sec:Ziel}
@@ -96,11 +96,10 @@ Folgende Eingenschaften sind die Kriterien, die in Betracht bei der Vorstellung 
 
 \begin{itemize}
 	\item Es soll das \ac{VCS} Git unbedingt unterstützen
-	\item Die Unterstützung vom \ac{VCS} \ac{SVN} ist vom Vorteil
+	\item Die Unterstützung vom \ac{VCS} \ac{SVN} ist ein Bonus
 	\item Es soll den Änderungsvergleich sowohl inline als auch Side-by-side deutlich darstellen können
 	\item \ac{CI}/\ac{CD} Tools sollen in den Workflow eingebaut werden können oder in dem System integrieren sein
-	\item Das System kann auf dem Eigenen Server hosten
-	\item Hosten auf dem Server des Anbieters ist ein Vorteil
+	\item Das System kann auf dem eigenen Server gehostet werden
 	\item Das System kann die Review-Kommentare nach Beenden des Reviews automatisch mit dem Haupt-Repository Zusammenführen
 	\item Review-Kommentare sind auf Zeilenebene möglich
 	\item Zugriffsverwaltung ist ein Vorteil
