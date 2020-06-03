@@ -1,6 +1,8 @@
 \section{Codereview-Systeme, die Git unterstützen}
 \label{sec:CRS-Git}
 
+Das ausgesuchte \ac{CRS} muss das \ac{VCS} Git unterstützen, aus dem Grund sind die folgende Systeme ausgewählt.
+
 \subsection{Bitbucket}
 \label{subsec:Bitbucket}
 
@@ -14,7 +16,6 @@ Bitbucket\footnote{\url{https://web.archive.org/web/20200507010219/https://bitbu
 		\begin{itemize}
 			\item Feature-Branch-Workflow: Erklärung im \cref{sec:Git-Workflows}
 			\item Git-flow-Workflow: Erklärung im \cref{sec:Git-Workflows}
-			\item Zentraler Workflow
 		\end{itemize}
 \end{itemize}
 
@@ -25,7 +26,8 @@ Die \cref{fig:Forking-workflow} zeigt die Feature-Branch-Workflow mit Pull-Anfra
 	\includegraphics[width=1.0\textwidth]{bitbucket_Forking-Workflorw}
 	\caption[Feature-Branch-Workflow]{Pull-Request.\\Eigene Darstellung}
 	\label{fig:Forking-workflow}
-\end{figure}		  
+\end{figure}
+\unsure{Das Bild wird noch verbessert}
 
 \begin{description}
 	\item [Bitbuckets Vorteile:] \hfill
@@ -49,7 +51,7 @@ Die \cref{fig:Forking-workflow} zeigt die Feature-Branch-Workflow mit Pull-Anfra
 \subsection{Crucible}
 \label{subsec:Crucible}
 
-Crucible ist eine webbasierte Anwendung, die einen formellen Codereview anbietet. Sie unterstützt die \acp{VCS} \ac{SVN}, Git, Mercurial, perforce.
+Crucible ist eine webbasierte Plattform, die einen formellen Codereview anbietet. Sie unterstützt die \acp{VCS} \ac{SVN}, Git, Mercurial, perforce.
 
 \begin{itemize}
 	\item \textbf{Art des Reviews}: \textit{pre- and post-commit}
@@ -109,7 +111,7 @@ Crucible ist eine webbasierte Anwendung, die einen formellen Codereview anbietet
 \subsection{Helix TeamHub}
 \label{subsec:HelixTeamHub}
 
-Helix TeamHub ist eine webbasierte Plattform, die Hosten und Management von Repositories ermöglicht. Sie unterstützt Mercurial, Git, \ac{SVN}, Ivy und mehr.
+Helix TeamHub ist eine webbasierte Plattform, die Hosten und Management von Repositories ermöglicht. Sie unterstützt Mercurial, Git, \ac{SVN}, Ivy, und mehr.
 
 \begin{itemize}
 	\item \textbf{Art des Reviews}: \textit{pre- and post-commit}.
@@ -122,7 +124,8 @@ Helix TeamHub ist eine webbasierte Plattform, die Hosten und Management von Repo
 		  Es wird zuerst ein Projekt erstellt und zu diesem Projekt wird ein Repository hinzugefügt. Durch Git wird ein Branch in diesem Repository
 		  erstellt. Der Entwickler arbeitet an diesem Branch. Sobald er einen Review braucht, erstellt er einen. In den Einstellungen sucht man den Branch aus, dann werden Reviewer
 		  ausgewählt. Im Review sind die Kommentare auf Zeilenebene möglich. So bekommt der Autor Antworten und Verbesserungsvorschläge. Sobald der Review fertig ist,
-		  können die Änderungen automatisch in den Master Branch zusammengeführt werden, was sich durch einen Klick erfolgen lässt. 
+		  können die Änderungen automatisch in den Master Branch zusammengeführt werden, was sich durch einen Klick erfolgen lässt.
+		  \unsure{was soll genau hier klarer erklärt werden ?}
 \end{itemize}
 
 \begin{description}
@@ -161,14 +164,13 @@ Gerrit ist ein \ac{CRS}, das sich von den anderen \acp{CRS} stark unterscheidet.
 			\begin{itemize}
 				\item Direkt im Gerrits Web-Plattform.
 				\item via REST endpoint
-				\item via SSH command
+				\item via SSH command \unsure{Abkürzung hinzufügen}
 				\item Manuell durch git
 			\end{itemize}
 			Bei Gerrit kann nicht jeder Benutzer ein Projekt erstellen, sondern nur die Administrator des Projekts.		
 			
 			\item Features entwickeln, dann die commiten und pushen. In diesem Fall pusht man die Änderungen nicht in den Master Branch, sondern in einen Gerrit Branch.
-				Gerrit benutzt Dieser Branch für den Review. Dementsprechend kommt man mit \textit{git diff} (git Befehl, um alte und neue Änderungen zu vergleichen) zum Vergleich
-				zwischen den Änderungen im Arbeitsverzeichnis und den Änderungen auf der Gerrits Branche.
+				Gerrit benutzt Dieser Branch für den Review. Dementsprechend kommt man mit \textit{git diff} \footnote{git Befehl, um alte und neue Änderungen zu vergleichen} zum 							Vergleich zwischen den Änderungen im Arbeitsverzeichnis und den Änderungen auf der Gerrits Branche.
 			\item Nach dem pushen wird einen Link erzeugt, der zur Webseite führt. Auf dieser Webseite kann der Autor: 
 			\begin{itemize}
 				\item Diffs anzeigen lassen.
