@@ -50,11 +50,92 @@ Die Webanwendung ist imstande, die Änderungsvergleich von jedem commit sowohl i
 \end{figure}
 
 Im Gegensatz zu anderen Tools wird hier nur die Stelle, die geändert ist, markiert und nicht die ganze Zeile, die dazu gehört, was bei einer klaren Übersicht beiträgt.
+Das Erstellen von Pull Request für den Feature Branch Übernimmt die Benutzer die an diesem Branch arbeiten. Beim Erstellen das Pull Requests wird das Feature Branch und das Ziel Branch ausgesucht und die Reviewer werden vom Autor ausgewählt. Die Beschreibung vom Pull Request wird die Nachrichten der Commits, die in dem Feature Branch eingecheckt wurden. Diese Beschreibung kann aber geändert werden.
 
-\textbf{Pull-Request:} \unsure{1. klone das repository vom Bitbucket\\2. Erstelle ein Feature-Branch\\3. Füge Die Änderungen im Abschnitt 5 hinzu\\6. sende die Pull-Anfrage an Björn}
+Die Reviwer können das Pull Request auf Zeilen Ebene kommentieren, Todos erstellen (Allerdings nur nach dem Kommentar). Direkte Änderungen am Quelltext, die der Autor annehmen kann, sind nicht möglich (Mindestens mit der freien Version von Bitbucket-Cloud). Benutzer dieser Cloud-Version können keine Einschränkungen auf das Pull Request stellen, so kann der Feature Branch mit dem Ziel-Branch vom Autor zusammengeführt wird ohne ,dass die Reviewer das Pull Request zustimmen oder die von den Reviewern erstellte Todos gemacht zu haben.
 
 \subsubsection{Self-Hosten}
 \label{subsubsec:Bitbucket-self-host} 
+
+Die Installation von Bitbucket-Server mit der Versionsnummer 7.2.3 erfolgte durch eine ZIP-Datei. Ein Verzeichnis für die Projekte und deren Repositories muss manuell erstellt werden und auf es in der Konfiguration-Datei \textit{set-bitbucket-home.sh} verwiesen werden, diese ist im Verzeichnis \textit{/atlassian-bitbucket-7.2.3/bin} zu finden. Wenn es kein Script für das Starten bzw. Stoppen von Bitbucket-Server erstellt wird, sind die ausführbare Dateien \textit{start-bitbucket.sh} und \textit{stop-bitbucket.sh} dafür verantwortlich.
+
+Nachdem Starten von Bitbucket-Server können Projekte erstellt werden. In einem Projekt können neue Repositories angelegt oder auch von einem anderen Server geklont werden.
+Bitbucket-Server hat im Vergleich zu der Cloud-Version mehr Funktionen wie beispielsweise das Abspalten von Branches oder der Änderungsvergleich zwischen ausgesuchten Commits, Versionen oder auch Branches. Die \cref{fig:Flexibilität des Änderungsvergleich} zeigt die Flexibilität des Änderungsvergleichs auf Bitbucket-Server.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1.0\textwidth]{BitbucketServerDiff}
+	\caption[Flexibilität des Änderungsvergleichs auf Bitbucket-Server]{Flexibilität des Änderungsvergleichs \\Eigenes Screenshot}
+	\label{fig:Flexibilität des Änderungsvergleich}
+\end{figure}
+
+Die Änderungen können sowohl inline als auch side-by-side angezeigt werden. Ein Beispiel dafür ist die \cref{fig:BitbucketServerSideBySide}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1.0\textwidth]{BitbucketServerSideBySide}
+	\caption[side-by-side Änderungsvergleich auf Bitbucket-Server]{side-by-side Änderungsvergleich\\Eigenes Screenshot}
+	\label{fig:BitbucketServerSideBySide}
+\end{figure}
+
+Weil ein Pull-Request auf Bitbucket nur zwischen Branches möglich ist, sollen Features in abgespaltene Branches entwickelt und mit einem Pull Request zum Review abgesendet werden. Beim Erstellen eines Pull Requests werden zwei Branches markiert (Der Feature Branch, wo die Änderungen/Features entwickelt wurden und der Ziel-Branch, mit dem der Feature Branch zusammengeführt werden soll). Die Nachrichten von jedem Commit auf dem Feature Branch werden in der Beschreibung des Pull Requests auftauchen, die auch editiert werden kann. Es ist auch möglich Dateien mit dem Pull Request zu schicken (drag and drop ist möglich)
+Der letzte Schritt ist das Hinzufügen von Reviewer, die die Änderungen überprüfen, kommentieren und dann annehmen oder ablehnen können. Die \cref{fig:BitbucketServer Pull-Request} verdeutlicht die erwähnten Schritte.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1.0\textwidth]{BitbucketServer Pull-Request}
+	\caption[Pull-Request auf Bitbucket-Server]{Pull-Request\\Eigenes Screenshot}
+	\label{fig:BitbucketServer Pull-Request}
+\end{figure}
+
+Die Reviewer haben diverse Möglichkeiten, wie sie auf bestimmte Teile eines Pull Requests reagieren. Diese Möglichkeiten sind:
+\begin{itemize}
+	\item Kommentare, auf sie auch vom Autor wieder kommentiert werden kann. Beispiel \cref{fig:BitbucketServerKommentar}
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=1.0\textwidth]{BitbucketServerKommentar}
+		\caption[Bitbucket-Server Kommentare]{Kommentare\\Eigenes Screenshot}
+		\label{fig:BitbucketServerKommentar}
+	\end{figure}
+	
+	\item Direkte Änderungen im Quelltext machen, die der Autor als Vorschläge bekommt. Bei der Annahme dieser Vorschläge muss der Autor eine commit Nachricht schreiben, da diese 				Annahme als ein neues commit gesehen wird. Beispiel \cref{fig:BitbucketServer Vorschläge}
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=1.0\textwidth]{BitbucketServer Vorschläge}
+		\caption[Bitbucket-Server Änderungsvorschläge]{Änderungsvorschläge\\Eigenes Screenshot}
+		\label{fig:BitbucketServer Vorschläge}
+	\end{figure}
+	
+	
+	\item Erstellen von Task-Liste. Review können aufgaben/Todos stellen, die vom Autor nach dem Einchecken der Bearbeitung dieser Aufgaben als erledigt markiert werden können. Beispiel 	\cref{fig:BitbucketServer Tasklist}
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=1.0\textwidth]{BitbucketServer Tasklist}
+		\caption[Bitbucket-Server Todos]{Todos/Aufgaben\\Eigenes Screenshot}
+		\label{fig:BitbucketServer Tasklist}
+	\end{figure}
+\end{itemize}
+
+Bitbucket-Server bietet die volle Kontrolle auf das Pul Request, sodass das Team den Workflow der Arbeit an seine Bedürfnisse anpassen kann. Ein Pull Request von einem Feature Branch kann beispielsweise nur dann mit dem Ziel-Branch zusammengeführt werden, wenn alle Reviewer oder gewählte Reviewer das Pull Request bestätigen. Eine andere Möglichkeit wäre es, dass keine offenen Aufgaben dabei sind, wenn es gemergt werden soll. Diese Einstellung sind auf \cref{fig:BitbucketServer Merge-Checks} zu sehen.
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1.0\textwidth]{Merge-Checks}
+	\caption[BitbucketServer Merge-Checks]{BitbucketServer Merge-Checks\\Eigenes Screenshot}
+	\label{fig:BitbucketServer Merge-Checks}
+\end{figure}
+
+Außerdem kann der Administrator eines Projekts Beschränkungen auf die Commits einrichten z.B., dass nur bestimmte Benutzer in einem Repository ihre Änderungen einchecken können. Die \ref{fig:BitbucketServer Commits-Kontrolle} zeigt die mögliche Beschränkungen.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1.0\textwidth]{Commits-Kontrolle}
+	\caption[BitbucketServer Commits-Beschränkungen]{BitbucketServer Commits-Beschränkungen\\Eigenes Screenshot}
+	\label{fig:BitbucketServer Commits-Kontrolle}
+\end{figure}
+
+Nach dem die Reviewer sich das Pull Request angeschaut,Kommentiert und Aufgaben sowie Vorschläge gestellt haben und der Autor diese bearbeitet hat, wurde das Feature Branch mit dem Ziel-Branch zusammengeführt.
+
+\unsure{Bilder sind zu kein oder ?\\Durch Vergrößern werden aber Teile vermisset:( }
 
 \subsection{Gerrit}
 \label{subsubsec:Test_Gerrit}
