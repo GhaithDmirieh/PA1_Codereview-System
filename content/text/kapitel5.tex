@@ -140,7 +140,97 @@ Nach dem die Reviewer sich das Pull Request angeschaut,Kommentiert und Aufgaben 
 \subsection{Gerrit}
 \label{subsubsec:Test_Gerrit}
 
-Bei Gerrit handelt es sich nur um Self-Hosten \dots
+Gerrit ist kein Quellcodeverwaltungssystem, da Gerrit nur für das Review verantwortlich ist. Das System arbeitet ausschließlich mit dem \ac{VCS} Git und hat keine Cloud Version. D.h. bei Gerrit handelt es sich nur um self hosten. Die Installation auf odin erfolgte durch ein \textit{.war} Datei, die mit dem Command
+
+{\color{blue}
+\begin{verbatim}
+	java -jar gerrit.war init -d <Pfad zur .war Datei> 
+\end{verbatim}}
+
+initialisieren lässt. Nach der Initialisierung müssen noch wichtige Konfigurationen in der datei \textit{gerrit.config}, die im Verzeichnis \textit{gerrit-Verzeichnis/etc} zu finden sind, eingestellt werden. Wie beispielsweise die Authentifizierung oder auch, wo Gerrit seine Projekte und Repositories anliegt. Das Programm kann danach mit dem Command
+
+{\color{blue} 
+\begin{verbatim}
+	gerrit.sh start
+\end{verbatim}}
+
+gestartet werden. Diese Datei befindet sich im Verzeichnis \textit{Gerrit-Verzeichnis/bin}. Gerrit ist ab jetzt lauffähig und Projekte können erstellt werden. Um ein Projekt zu erstellen  gibt es verschiedene Methoden. Hier wird  ein Projekt via SSH erstellt, was durch das Command
+
+{\color{blue}
+\begin{verbatim}
+	ssh -p <port> <host> gerrit create-project <Name des Projekts>
+\end{verbatim}}
+
+erfolgen lässt. Gerrit kann einfach als ein neues Remote für ein bestehendes Repository hinzugefügt werden. Schließlich werden die Commits dieses Repositorys mit dem command
+
+{\color{blue}
+\begin{verbatim}
+	git push <remote name> <host>/<project name>
+\end{verbatim}}
+
+auf Gerrit hochgeladen.
+
+\subsubsection{Reviews Workflow}
+\label{subsubsec:Reviews Workflow bei Gerrit}
+
+Der erster Schritt ist das Hinzufügen ein \textbf{Change-Id} für die Commits. Dieses ID erlaubt Gerrit, verschiedene Versionen derselben Änderungen, die überprüft werden sollen, miteinander zu verknüpfen. Dieser Schritt ist durch die zwei Commands
+
+{\color{blue}
+\begin{verbatim}
+	scp -p -P <port> <host>:hooks/commit-msg <Pfad zum Repository>/.git/hooks/
+	chmod u+x .git/hooks/commit-msg
+\end{verbatim}}
+
+zu erreichen. Ab jetzt können Änderungen reviewt werden, indem man die Änderungen in den Branch \textit{HEAD:refs/for/master} von gerrit pusht. Beispiel für die Review-Webseite auf Gerrit stellt die \cref{fig:Gerrit-Review} vor.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1.0\textwidth]{Gerrit-Review}
+	\caption[Gerrit Reviews Oberfläche]{Gerrit-Reviews Oberfläche\\Eigenes Screenshot}
+	\label{fig:Gerrit-Review}
+\end{figure}
+
+In dieser Webseite können die Reviewer hinzugefügt werden, die eine E-Mail bekommen, dass sie zum Review eingeladen sind. Gerrit verschickt auch E-Mails an den Autor Änderungen oder Kommentare vom Reviewer. Ebenfalls bekommen wieder die Reviewer E-Mails, wenn der Autor auf ihre Kommentare reagiert.
+
+Reviewer haben die Möglichkeit auf Zeilenebene die Änderungen zu kommentieren. Beispiel dafür zeigt die \cref{fig:Gerrit Reviewer-Kommentare} 
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1.0\textwidth]{Gerrit-Kommentar}
+	\caption[Gerrit Reviewer-Kommentare]{Gerrit Reviewer-Kommentare\\Eigenes Screenshot}
+	\label{fig:Gerrit Reviewer-Kommentare}
+\end{figure}
+
+Was auch Gerrit ermöglicht, sind die direkte Änderungen am Quelltext. Reviewer sind imstande, ihre Meinung direkt am Quelltext zu äußern. Der Autor kann dann mithilfe von Git diese Vorschläge von den Reviewern übernehmen. Der Prozess erfolgt durch das Edit-Modus in der Webseite von Gerrit. Die \cref{fig:Gerrit Edit-Modus} zeigt dieses Modus.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1.0\textwidth]{Gerrit Edit}
+	\caption[Gerrit Edit-Modus]{Gerrit Edit-Modus\\Eigenes Screenshot}
+	\label{fig:Gerrit Edit-Modus}
+\end{figure}
+
+Selber auf die Nachricht des Commits Können die Reviewer kommentieren. Beispiel dafür ist die \ref{fig:Gerrit Kommentar auf Commits Nachricht}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1.0\textwidth]{Gerrit Kommentar auf Commits Nachricht}
+	\caption[Gerrit Kommentar auf die Nachricht des Commits]{Gerrit Kommentar auf die Nachricht des Commits\\Eigenes Screenshot}
+	\label{fig:Gerrit Kommentar auf Commits Nachricht}
+\end{figure}
+
+
+
+Nachdem die Reviwer die Änderungen anschauen und darauf reagieren und ihre Vorschläge machen, bekommen die Antworten vom Autor, diese sind Kommentare oder Bearbeitung der Änderungen. Falls die Reviewer die bearbeitete Änderungen gut finden, können sie diese bestätigen. Erst wenn die Änderungen bestätigt sind, kann das Commit mit dem Ziel-Branch zusammengeführt werden.
+
+Die Reviewer können auf 5 Ebenen die Änderungen bewerten, diese sind
+\begin{enumerate}
+	\item \textbf{-2} Ich bestätige sie nicht
+	\item \textbf{-1} Sieht für mich gut aus, aber jemand anderes muss sie noch bestätigen
+	\item \textbf{0}  Keine Punktzahl
+	\item \textbf{+1} Ich würde es vorziehen, Wenn Sie sie nicht einchecken
+	\item \textbf{+2} Sieht gut aus. Ich bestätige sie
+\end{enumerate}
 
 \subsection{Vergleich}
 \label{subsec:Vergleich_Bitbucket_Gerrit}
