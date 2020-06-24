@@ -270,9 +270,20 @@ Die zwei Systeme unterscheiden sich in zahlreichen Punkten, jedoch werden hier n
 	\label{table:Vergleichstabelle Gerrit & Bitbucket}
 \end{table}
 
-Ganz wichtig zu erwähnen, dass um ein Pull Request zu erstellen, sollen die vom Pull Request betroffene Änderungen bereits in einem abgespaltenen Branch auf dem Remote-Repository stehen. D.h. Pull Requests sind mit Branchs engverbunden, was bestimmte Workflows erzwingt, demzufolge verringert dieser Prozess die Flexibilität vom \ac{VCS} Git, das die Entwickler ermöglicht, den Workflow an die Bedürfnisse des Teams anzupassen. 
-
 \subsection{Auswertung}
 \label{subsec:Auswertung}
 
-Bitbucket erleichtert die Arbeit mit seinen Funktionen in seiner Webseite, da man imstande ist, Branchs direkt in der Webseite zu erstellen oder sie abzuspalten. Im Gegensatz dazu hat Gerrit diese Funktionen nicht, da bei Gerrit es hauptsächlich um das Review geht. Beide Systeme können den Zugriff sowohl auf die Repositories als auch auf das Review beschränken, so dass nur bestimmte Entwickler daran arbeiten.
+Ganz wichtig zu erwähnen, dass um ein Pull Request zu erstellen, sollen die vom Pull Request betroffene Änderungen bereits in einem abgespaltenen Branch auf dem Remote-Repository stehen. D.h. Pull Requests sind mit Branchs engverbunden, was bestimmte Workflows erzwingt, demzufolge verringert dieser Prozess die Flexibilität vom \ac{VCS} Git, das die Entwickler ermöglicht, den Workflow an die Bedürfnisse des Teams anzupassen. Außerdem sind beispielsweise kleine Änderungen wie einen Fehler der korrigiert werden muss und seine Korrektur aus einer Zeile besteht, die jemanden anderen zuerst anschauen soll, nicht mehr flexibel, da dafür brauchen die Entwickler bei Bitbucket ein Branch zu erstellen. Im Gegensatz zu Gerrit kann man direkt im Haupt-Branch was ändern und ein Review dafür starten.
+
+Bitbucket erleichtert die Arbeit mit seinen Funktionen in seiner Webseite, da man imstande ist, Branchs direkt in der Webseite zu erstellen oder sie abzuspalten. Im Gegensatz dazu hat Gerrit diese Funktionen nicht, da bei Gerrit es hauptsächlich um das Review geht. Beide Systeme können Zugriffsregeln auf die Repositories, Branchs oder auch wer reviewen darf erstellen, so dass nur bestimmte Entwickler daran arbeiten können.
+
+Die Abteilung hat sich aus den folgenden Gründen
+
+\begin{itemize}
+	\item Bei Gerrit kann das Review unabhängig von dem Branch, an dem der Entwickler arbeitet, starten
+	\item Ist der Entwickler mit seinen Änderungen fertig und will sie in das Haupt-Branch einchecken und inzwischen hat jemand an das Haupt-Branch was geändert, dann kann Gerrit 		mit damit umgehen
+	\item Gerrit ist völlig kostenlos
+	\unsure{Fehlt noch was ?}
+\end{itemize}
+
+für Gerrit entschieden.
