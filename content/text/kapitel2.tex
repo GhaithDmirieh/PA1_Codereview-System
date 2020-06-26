@@ -41,13 +41,21 @@ Zum besseren Verständnis der Arbeit werden hier die wichtigsten Begriffe defini
 	\item [pre-commit:]
 		Ist eine Art des Reviews, mit der man die Änderungen des Quelltextes überprüft, bevor die in das Haupt-Repository des Versionsverwaltungssystems gelangen.
 		\begin{description}
+		
 			\item [Vorteile:] \hfill
 			\begin{enumerate}
 				\item Diese Art erstellt eine Art von Sicherheit, da fehlerhafte oder unvollständige Änderungen durch den Review auftreten können
 				\item Dieser Prozess stellt sicher, dass der Autor seine Änderungen überprüfen lässt und nicht direkt in das Ziel-Repository eincheckt
 			\end{enumerate}
-		\end{description}
 		
+			\item [Nachteile:] \hfill
+			\begin{enumerate}
+				\item Es besteht keine Möglichkeit mehr, um bestehende Commits zu überprüfen
+				\item Kostet viel Zeit, da durch Verwendung dieser Methode muss jede Änderung unabhängig von der Größe zuerst angeschaut werden
+			\end{enumerate}
+			
+		\end{description}	
+				
 	\item [Pull Request:]
 		Ist eine Anfrage, die die neue Features enthält und an die Reviewer abschickt wird, um Änderungen am Code zu überprüfen. Meistens arbeiten die Entwickler an einem abgespaltenen 			Zweig vom Ziel branch und sobald er fertig ist, sendet er die Anfrage zur Überprüfung an die Reviewer. Wird ein Pull-Request angenommen, werden die Änderungen mit dem Ziel- 				Branch zusammengeführt. wird das Pull Request abgelehnt, werden die Änderungen bearbeitet und wird eine neue Anfrage benötigt.
 	
