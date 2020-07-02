@@ -20,8 +20,10 @@ Zum besseren Verständnis der Arbeit werden hier die wichtigsten Begriffe defini
 		\end{itemize}
 	
 	\item[Commit:] Ist ein Ausdrück, der eine dokumentierte Änderung einer Datei im \ac{VCS} beschreibt. Jedes Commit ist bekannt durch ein bestimmtes ID.
+	Für das Review ist es wichtig zu unterscheiden zwischen den folgenden zwei commits Methoden:
 	
-	\item [Post-commit:]
+	\begin{itemize}	
+	\item \textbf{Post-commit:}
 		Die Überprüfung erfolgt, nachdem die Änderungen am Quelltext an das Ziel-Repository gesendet wurde.
 		\begin{description}
 			\item [Vorteile:] \hfill
@@ -37,8 +39,7 @@ Zum besseren Verständnis der Arbeit werden hier die wichtigsten Begriffe defini
 			\end{enumerate}
 		\end{description}
 		
-		
-	\item [pre-commit:]
+	\item \textbf{pre-commit:}
 		Ist eine Art des Reviews, mit der man die Änderungen des Quelltextes überprüft, bevor die in das Haupt-Repository des Versionsverwaltungssystems gelangen.
 		\begin{description}
 		
@@ -55,6 +56,7 @@ Zum besseren Verständnis der Arbeit werden hier die wichtigsten Begriffe defini
 			\end{enumerate}
 			
 		\end{description}	
+	\end{itemize}
 				
 	\item [Pull Request:]
 		Ist eine Anfrage, die die neue Features enthält und an die Reviewer abschickt wird, um Änderungen am Code zu überprüfen. Meistens arbeiten die Entwickler an einem abgespaltenen 			Zweig vom Ziel branch und sobald er fertig ist, sendet er die Anfrage zur Überprüfung an die Reviewer. Wird ein Pull-Request angenommen, werden die Änderungen mit dem Ziel- 				Branch zusammengeführt. wird das Pull Request abgelehnt, werden die Änderungen bearbeitet und wird eine neue Anfrage benötigt.
