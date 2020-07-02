@@ -2,11 +2,13 @@
 \label{sec:Ausgesuchte Systeme}
 
 Zwei der sechs Systeme im \cref{sec:CRS-Git} werden aufgrund deren Eigenschaften, die in der Firma benötigt sind, aufgebaut und getestet. Diese Sind Bitbucket \cref{subsec:Bitbucket} und Gerrit \cref{subsec:Gerrit}.
-Folgende Punkte werden beim Testen betrachtet:
+
+Folgende Punkte wurden beim Testen betrachtet:
+
 \begin{itemize}
 	\item Wie aufwendig der Systems Aufbau ist
-	\item Wie kann der Review gestartet und geschlossen werden
-	\item Kann eine Pull-Request im Vergleich zu den anderen Methoden des Reviews vorteilhaft sein
+	\item Wie kann das Review gestartet und geschlossen werden
+	\item Kann eine Pull Request im Vergleich zu den anderen Methoden des Reviews vorteilhaft sein
 	\item Erfüllt das System die Kriterien im \cref{sec:kriterien}
 \end{itemize}
 
@@ -15,7 +17,7 @@ Nach der Testphase werden die zwei Systeme ausgewertet, miteinander verglichen u
 \section{Testphase}
 \label{sec:testphase}
 
-Zum Testen vom Reviews Workflow und von anderen Funktionen der ausgesuchten Systeme \cref{sec:Ausgesuchte Systeme}, wird diese Arbeit, die bereits mit Git versioniert und auf dem Server (Namens odin) der Software-Abteilung gehostet wurde, verwendet, deswegen wird sie in den nächsten Bildern erscheinen.  Die zwei Systeme werden ebenfalls auf odin installiert, wohl wissend, dass auf odin ein Debian läuft. Und Der Reviewer wird Björn schäpers \cite{Bjoern} sein.
+Zum Testen vom Reviews Workflow und von anderen Funktionen der ausgesuchten Systeme \cref{sec:Ausgesuchte Systeme}, wird diese Arbeit, die bereits mit Git versioniert und auf dem Server (Namens odin) der Software-Abteilung gehostet wurde, verwendet, deswegen wird sie in den nächsten Bildern erscheinen.  Die zwei Systeme werden ebenfalls auf odin installiert, wohl wissend, dass auf odin ein Debian läuft. Und Der Reviewer wird der Experte Björn schäpers \cite{Bjoern} sein.
 
 \subsection{Bitbucket}
 \label{subsec:Test_Bitbucket}
@@ -31,7 +33,7 @@ vorgestellt und miteinander verglichen.
 \subsubsection{Hosten auf dem Server des Anbieters}
 \label{subsubsec:Bitbucket-Cloud}
 
-Für den Beginn Verlangt die Webanwendung vom Bitbucket nur eine Anmeldung und schon kann man anfangen, Projekte zu erstellen, in denen die Repositories geklont oder neue erstellt werden können. In dieser Anwendung können auch Funktionen durchgeführt werden, die man mit dem Command Line von Git macht. Wie beispielsweise ein neues Branch erstellen, wie in der \cref{fig:Bitbucket-Branch-erstellen} zu sehen ist oder ein Repositpry klonen.
+Für den Beginn Verlangt die Webanwendung vom Bitbucket nur eine Anmeldung und schon kann man anfangen, Projekte zu erstellen, in denen die Repositories geklont oder neue erstellt werden können. In dieser Anwendung können auch Funktionen durchgeführt werden, die man mit dem Command Line von Git macht. Wie beispielsweise ein neues Branch erstellen, wie in \cref{fig:Bitbucket-Branch-erstellen} zu sehen ist oder ein Repositpry klonen.
 
 \begin{figure}[H]
 	\centering
@@ -107,7 +109,7 @@ Die Reviewer haben diverse Möglichkeiten, wie sie auf bestimmte Teile eines Pul
 	\end{figure}
 	
 	
-	\item Erstellen von Task-Liste. Review können aufgaben/Todos stellen, die vom Autor nach dem Einchecken der Bearbeitung dieser Aufgaben als erledigt markiert werden können. Beispiel 	\cref{fig:BitbucketServer Tasklist}
+	\item Erstellen von Task-Liste. Reviewer können aufgaben/Todos stellen, die vom Autor nach dem Einchecken der Bearbeitung dieser Aufgaben als erledigt markiert werden können. Beispiel 	\cref{fig:BitbucketServer Tasklist}
 	\begin{figure}[H]
 		\centering
 		\includegraphics[width=1.0\textwidth]{BitbucketServer Tasklist}
@@ -135,12 +137,10 @@ Außerdem kann der Administrator eines Projekts Beschränkungen auf die Commits 
 
 Nach dem die Reviewer sich das Pull Request angeschaut,Kommentiert und Aufgaben sowie Vorschläge gestellt haben und der Autor diese bearbeitet hat, wurde das Feature Branch mit dem Ziel-Branch zusammengeführt.
 
-\unsure{Bilder sind zu kein oder ?\\Durch Vergrößern werden aber Teile vermisset:( }
-
 \subsection{Gerrit}
 \label{subsubsec:Test_Gerrit}
 
-Gerrit ist kein Quellcodeverwaltungssystem, da Gerrit nur für das Review verantwortlich ist. Das System arbeitet ausschließlich mit dem \ac{VCS} Git und hat keine Cloud Version. D.h. bei Gerrit handelt es sich nur um self hosten. Die Installation auf odin erfolgte durch ein \textit{.war} Datei, die mit dem Command
+Gerrit unterscheidet sich von den anderen Quellcodeverwaltungssysteme, da Gerrit mehr Gewicht auf das Review legt. Das System arbeitet ausschließlich mit dem \ac{VCS} Git und hat keine Cloud Version. D.h. bei Gerrit handelt es sich nur um self hosten. Die Installation auf odin erfolgte durch ein \textit{.war} Datei, die mit dem Command
 
 {\color{blue}
 \begin{verbatim}
@@ -154,7 +154,7 @@ initialisieren lässt. Nach der Initialisierung müssen noch wichtige Konfigurat
 	gerrit.sh start
 \end{verbatim}}
 
-gestartet werden. Diese Datei befindet sich im Verzeichnis \textit{Gerrit-Verzeichnis/bin}. Gerrit ist ab jetzt lauffähig und Projekte können erstellt werden. Um ein Projekt zu erstellen  gibt es verschiedene Methoden. Hier wird  ein Projekt via SSH erstellt, was durch das Command
+gestartet werden. Diese Datei befindet sich im Verzeichnis \textit{Gerrit-Verzeichnis/bin}. Gerrit ist ab jetzt lauffähig und Projekte können erstellt werden. Um ein Projekt zu erstellen gibt es verschiedene Methoden. Hier wird ein Projekt via SSH erstellt, was durch das Command
 
 {\color{blue}
 \begin{verbatim}
