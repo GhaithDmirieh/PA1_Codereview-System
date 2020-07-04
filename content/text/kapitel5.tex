@@ -38,23 +38,23 @@ Für den Beginn Verlangt die Webanwendung vom Bitbucket nur eine Anmeldung und s
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=1.0\textwidth]{Bitbucket-Branch-erstellen}
-	\caption[Branch auf Bitbuckets Anwendung erstellen]{Ein neues Branch erstellen\\Eigenes Screenshot}
+	\caption[Branch auf Bitbuckets Anwendung erstellen]{Ein neues Branch erstellen\\Eigener Screenshot}
 	\label{fig:Bitbucket-Branch-erstellen}
 \end{figure}
 
-Die Webanwendung ist imstande, die Änderungsvergleich von jedem commit sowohl inline als auch side-by-side anzuzeigen. Ein Beispiel dafür ist die \cref{fig:Diffs_side-by-side}.
+Die Webanwendung ist im Stande, die Änderungsvergleich von jedem commit sowohl inline als auch side-by-side anzuzeigen. Ein Beispiel dafür ist die \cref{fig:Diffs_side-by-side}.
 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=1.0\textwidth]{Bitbucket side-by-side diffs}
-	\caption[Bitbuckets Webanwendung side-by-side Änerungsvergleich]{Diffs side-by-side\\Eigenes Screenshot}
+	\caption[Bitbuckets Webanwendung side-by-side Änerungsvergleich]{Diffs side-by-side\\Eigener Screenshot}
 	\label{fig:Diffs_side-by-side}
 \end{figure}
 
 Im Gegensatz zu anderen Tools wird hier nur die Stelle, die geändert ist, markiert und nicht die ganze Zeile, die dazu gehört, was bei einer klaren Übersicht beiträgt.
-Das Erstellen von Pull Request für den Feature Branch Übernimmt die Benutzer die an diesem Branch arbeiten. Beim Erstellen das Pull Requests wird das Feature Branch und das Ziel Branch ausgesucht und die Reviewer werden vom Autor ausgewählt. Die Beschreibung vom Pull Request wird die Nachrichten der Commits, die in dem Feature Branch eingecheckt wurden. Diese Beschreibung kann aber geändert werden.
+Das Erstellen von Pull Request für den Feature Branch Übernimmt die Benutzer die an diesem Branch arbeiten. Beim Erstellen das Pull Requests wird der Feature Branch und der Ziel Branch ausgesucht und die Reviewer werden vom Autor ausgewählt. Die Beschreibung vom Pull Request wird die Nachrichten der Commits, die in dem Feature Branch eingecheckt wurden. Diese Beschreibung kann aber geändert werden.
 
-Die Reviwer können das Pull Request auf Zeilen Ebene kommentieren, Todos erstellen (Allerdings nur nach dem Kommentar). Direkte Änderungen am Quelltext, die der Autor annehmen kann, sind nicht möglich (Mindestens mit der freien Version von Bitbucket-Cloud). Benutzer dieser Cloud-Version können keine Einschränkungen auf das Pull Request stellen, so kann der Feature Branch mit dem Ziel-Branch vom Autor zusammengeführt wird ohne ,dass die Reviewer das Pull Request zustimmen oder die von den Reviewern erstellte Todos gemacht zu haben.
+Die Reviwer können das Pull Request auf Zeilen Ebene kommentieren, Todos erstellen \footnote{Allerdings nur nach dem Kommentar}. Direkte Änderungen am Quelltext, die der Autor annehmen kann, sind nicht möglich \footnote{Zumindest mit der freien Version von Bitbucket-Cloud}. Benutzer dieser Cloud-Version können keine Einschränkungen auf das Pull Request stellen, so kann der Feature Branch mit dem Ziel-Branch vom Autor zusammengeführt wird ohne ,dass die Reviewer das Pull Request zustimmen oder die von den Reviewern erstellte Todos gemacht zu haben.
 
 \subsubsection{Self-Hosten}
 \label{subsubsec:Bitbucket-self-host} 
@@ -67,7 +67,7 @@ Bitbucket-Server hat im Vergleich zu der Cloud-Version mehr Funktionen wie beisp
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=1.0\textwidth]{BitbucketServerDiff}
-	\caption[Flexibilität des Änderungsvergleichs auf Bitbucket-Server]{Flexibilität des Änderungsvergleichs \\Eigenes Screenshot}
+	\caption[Flexibilität des Änderungsvergleichs auf Bitbucket-Server]{Flexibilität des Änderungsvergleichs \\Eigener Screenshot}
 	\label{fig:Flexibilität des Änderungsvergleich}
 \end{figure}
 
@@ -76,7 +76,7 @@ Die Änderungen können sowohl inline als auch side-by-side angezeigt werden. Ei
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=1.0\textwidth]{BitbucketServerSideBySide}
-	\caption[Side-by-side Änderungsvergleich auf Bitbucket-Server]{side-by-side Änderungsvergleich\\Eigenes Screenshot}
+	\caption[Side-by-side Änderungsvergleich auf Bitbucket-Server]{side-by-side Änderungsvergleich\\Eigener Screenshot}
 	\label{fig:BitbucketServerSideBySide}
 \end{figure}
 
@@ -86,34 +86,34 @@ Der letzte Schritt ist das Hinzufügen von Reviewer, die die Änderungen überpr
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=1.0\textwidth]{BitbucketServer Pull-Request}
-	\caption[Pull-Request auf Bitbucket-Server]{Pull-Request\\Eigenes Screenshot}
+	\caption[Pull-Request auf Bitbucket-Server]{Pull-Request\\Eigener Screenshot}
 	\label{fig:BitbucketServer Pull-Request}
 \end{figure}
 
 Die Reviewer haben diverse Möglichkeiten, wie sie auf bestimmte Teile eines Pull Requests reagieren. Diese Möglichkeiten sind:
 \begin{itemize}
-	\item Kommentare, auf sie auch vom Autor wieder kommentiert werden kann. Beispiel \cref{fig:BitbucketServerKommentar}
+	\item Kommentare, auf sie auch vom Autor wieder kommentiert werden kann. Beispiel \cref{fig:BitbucketServerKommentar}.
 	\begin{figure}[H]
 		\centering
 		\includegraphics[width=1.0\textwidth]{BitbucketServerKommentar}
-		\caption[Bitbucket-Server Kommentare]{Kommentare\\Eigenes Screenshot}
+		\caption[Bitbucket-Server Kommentare]{Kommentare\\Eigener Screenshot}
 		\label{fig:BitbucketServerKommentar}
 	\end{figure}
 	
-	\item Direkte Änderungen im Quelltext machen, die der Autor als Vorschläge bekommt. Bei der Annahme dieser Vorschläge muss der Autor eine commit Nachricht schreiben, da diese 				Annahme als ein neues commit gesehen wird. Beispiel \cref{fig:BitbucketServer Vorschläge}
+	\item Direkte Änderungen im Quelltext machen, die der Autor als Vorschläge bekommt. Bei der Annahme dieser Vorschläge muss der Autor eine commit Nachricht schreiben, da diese 				Annahme als ein neues commit gesehen wird. Beispiel \cref{fig:BitbucketServer Vorschläge}.
 	\begin{figure}[H]
 		\centering
 		\includegraphics[width=1.0\textwidth]{BitbucketServer Vorschläge}
-		\caption[Bitbucket-Server Änderungsvorschläge]{Änderungsvorschläge\\Eigenes Screenshot}
+		\caption[Bitbucket-Server Änderungsvorschläge]{Änderungsvorschläge\\Eigener Screenshot}
 		\label{fig:BitbucketServer Vorschläge}
 	\end{figure}
 	
 	
-	\item Erstellen von Task-Liste. Reviewer können Aufgaben/Todos stellen, die vom Autor nach dem Einchecken der Bearbeitung dieser Aufgaben als erledigt markiert werden können. Beispiel 	\cref{fig:BitbucketServer Tasklist}
+	\item Erstellen von Task-Liste. Reviewer können Aufgaben/Todos stellen, die vom Autor nach dem Einchecken der Bearbeitung dieser Aufgaben als erledigt markiert werden können. Beispiel 	\cref{fig:BitbucketServer Tasklist}.
 	\begin{figure}[H]
 		\centering
 		\includegraphics[width=1.0\textwidth]{BitbucketServer Tasklist}
-		\caption[Bitbucket-Server Todos]{Todos/Aufgaben\\Eigenes Screenshot}
+		\caption[Bitbucket-Server Todos]{Todos/Aufgaben\\Eigener Screenshot}
 		\label{fig:BitbucketServer Tasklist}
 	\end{figure}
 \end{itemize}
@@ -122,7 +122,7 @@ Bitbucket-Server bietet die volle Kontrolle auf das Pul Request, sodass das Team
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=1.0\textwidth]{Merge-Checks}
-	\caption[BitbucketServer Merge-Checks]{BitbucketServer Merge-Checks\\Eigenes Screenshot}
+	\caption[BitbucketServer Merge-Checks]{BitbucketServer Merge-Checks\\Eigener Screenshot}
 	\label{fig:BitbucketServer Merge-Checks}
 \end{figure}
 
@@ -131,7 +131,7 @@ Außerdem kann der Administrator eines Projekts Beschränkungen auf die Commits 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=1.0\textwidth]{Commits-Kontrolle}
-	\caption[BitbucketServer Commits-Beschränkungen]{BitbucketServer Commits-Beschränkungen\\Eigenes Screenshot}
+	\caption[BitbucketServer Commits-Beschränkungen]{BitbucketServer Commits-Beschränkungen\\Eigener Screenshot}
 	\label{fig:BitbucketServer Commits-Kontrolle}
 \end{figure}
 
@@ -186,7 +186,7 @@ Der erster Schritt ist das Hinzufügen ein \textbf{Change-Id} für die Commits. 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=1.0\textwidth]{Gerrit-Review}
-	\caption[Gerrit Reviews Oberfläche]{Gerrit-Reviews Oberfläche\\Eigenes Screenshot}
+	\caption[Gerrit Reviews Oberfläche]{Gerrit-Reviews Oberfläche\\Eigener Screenshot}
 	\label{fig:Gerrit-Review}
 \end{figure}
 
@@ -197,7 +197,7 @@ Reviewer haben die Möglichkeit auf Zeilenebene die Änderungen zu kommentieren.
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=1.0\textwidth]{Gerrit-Kommentar}
-	\caption[Gerrit Reviewer-Kommentare]{Gerrit Reviewer-Kommentare\\Eigenes Screenshot}
+	\caption[Gerrit Reviewer-Kommentare]{Gerrit Reviewer-Kommentare\\Eigener Screenshot}
 	\label{fig:Gerrit Reviewer-Kommentare}
 \end{figure}
 
@@ -206,7 +206,7 @@ Was auch Gerrit ermöglicht, sind die direkte Änderungen am Quelltext. Reviewer
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=1.0\textwidth]{Gerrit Edit}
-	\caption[Gerrit Edit-Modus]{Gerrit Edit-Modus\\Eigenes Screenshot}
+	\caption[Gerrit Edit-Modus]{Gerrit Edit-Modus\\Eigener Screenshot}
 	\label{fig:Gerrit Edit-Modus}
 \end{figure}
 
@@ -215,7 +215,7 @@ Selber auf die Nachricht des Commits Können die Reviewer kommentieren. Beispiel
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=1.0\textwidth]{Gerrit Kommentar auf Commits Nachricht}
-	\caption[Gerrit Kommentar auf die Nachricht des Commits]{Gerrit Kommentar auf die Nachricht des Commits\\Eigenes Screenshot}
+	\caption[Gerrit Kommentar auf die Nachricht des Commits]{Gerrit Kommentar auf die Nachricht des Commits\\Eigener Screenshot}
 	\label{fig:Gerrit Kommentar auf Commits Nachricht}
 \end{figure}
 
