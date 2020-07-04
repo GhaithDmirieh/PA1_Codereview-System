@@ -147,28 +147,28 @@ Gerrit unterscheidet sich von den anderen Quellcodeverwaltungssysteme, da Gerrit
 	java -jar gerrit.war init -d <Pfad zur .war Datei> 
 \end{verbatim}}
 
-initialisieren lässt. Nach der Initialisierung müssen noch wichtige Konfigurationen in der datei \textit{gerrit.config}, die im Verzeichnis \textit{gerrit-Verzeichnis/etc} zu finden sind, eingestellt werden. Wie beispielsweise die Authentifizierung oder auch, wo Gerrit seine Projekte und Repositories anliegt. Das Programm kann danach mit dem Command
+\noindent initialisieren lässt. Nach der Initialisierung müssen noch wichtige Konfigurationen in der datei \textit{gerrit.config}, die im Verzeichnis \textit{gerrit-Verzeichnis/etc} zu finden sind, eingestellt werden. Wie beispielsweise die Authentifizierung oder auch, wo Gerrit seine Projekte und Repositories anlegt. Das Programm kann danach mit dem Command
 
 {\color{blue} 
 \begin{verbatim}
 	gerrit.sh start
 \end{verbatim}}
 
-gestartet werden. Diese Datei befindet sich im Verzeichnis \textit{Gerrit-Verzeichnis/bin}. Gerrit ist ab jetzt lauffähig und Projekte können erstellt werden. Um ein Projekt zu erstellen gibt es verschiedene Methoden. Hier wird ein Projekt via SSH erstellt, was durch das Command
+\noindent gestartet werden. Diese Datei befindet sich im Verzeichnis \textit{Gerrit-Verzeichnis/bin}. Gerrit ist ab jetzt lauffähig und Projekte können erstellt werden. Um ein Projekt zu erstellen gibt es verschiedene Methoden. Hier wird ein Projekt via SSH erstellt, was durch das Command
 
 {\color{blue}
 \begin{verbatim}
 	ssh -p <port> <host> gerrit create-project <Name des Projekts>
 \end{verbatim}}
 
-erfolgen lässt. Gerrit kann einfach als ein neues Remote für ein bestehendes Repository hinzugefügt werden. Schließlich werden die Commits dieses Repositorys mit dem command
+\noindent erfolgen lässt. Gerrit kann einfach als ein neues Remote für ein bestehendes Repository hinzugefügt werden. Schließlich werden die Commits dieses Repositorys mit dem command
 
 {\color{blue}
 \begin{verbatim}
 	git push <remote name> <host>/<project name>
 \end{verbatim}}
 
-auf Gerrit hochgeladen.
+\noindent auf Gerrit hochgeladen.
 
 \subsubsection{Reviews Workflow}
 \label{subsubsec:Reviews Workflow bei Gerrit}
@@ -181,7 +181,7 @@ Der erster Schritt ist das Hinzufügen ein \textbf{Change-Id} für die Commits. 
 	chmod u+x .git/hooks/commit-msg
 \end{verbatim}}
 
-zu erreichen. Ab jetzt können Änderungen reviewt werden, indem man die Änderungen in den Branch \textit{HEAD:refs/for/master} von gerrit pusht. Beispiel für die Review-Webseite auf Gerrit stellt die \cref{fig:Gerrit-Review} vor.
+\noindent zu erreichen. Ab jetzt können Änderungen reviewt werden, indem man die Änderungen in den Branch \textit{HEAD:refs/for/master} von gerrit pusht. Beispiel für die Review-Webseite auf Gerrit stellt die \cref{fig:Gerrit-Review} vor.
 
 \begin{figure}[H]
 	\centering
