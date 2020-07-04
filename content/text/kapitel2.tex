@@ -131,7 +131,7 @@ Git bietet die Möglichkeit, den Workflow an den Bedürfnisse des Teams anzupass
 Ziel dieses Workflows, dass ein anderer Branch statt dem Master-Branch (Haupt-Branch) für die Entwicklung von Features und das Review verwendet.
 Ablauf: Vom Master-Branch wird einen Branch erstellt, den der Entwickler zu seiner Arbeitskopie klont. So arbeitet er \footnote{Es können auch mehrere Entwickler sein} unabhängig von seinen Kollegen an einem bestimmten Feature und 		sobald er das Feature fertig hat, wird er seine Änderungen mit einem \code{push} in dem abgespaltenen Branch senden. Danach kann der Entwickler je nach Einstellungen des Systems das 	Review starten. Wird das Review z. B. mit einem Pull-Request gemacht, soll der Entwickler an dieser Stelle das Pull-Request starten. So können sich die Reviewer die 				Änderungen anschauen, kommentieren und mit dem Autor diskutieren und am Ende diese Änderungen entweder annehmen oder ablehnen. Werden diese Änderungen angenommen, können direkt in 		den Master-Branch zusammengeführt werden \cite{Feature-Branch-Workflow}. Die \cref{fig:Forking-workflow} verdeutlicht diesen Prozess. 
 
-\begin{figure}[H]
+\begin{figure}[htbp]
 	\centering
 	\includegraphics[width=1.0\textwidth]{bitbucket_Forking-Workflorw}
 	\caption[Feature-Branch-Workflow]{Pull-Request.\\Eigene Darstellung}
@@ -150,9 +150,9 @@ Ablauf: Vom Master-Branch wird einen Branch erstellt, den der Entwickler zu sein
 "`Der Git-flow-Workflow ist ein Git-Workflow, der von Vincent Driessen auf nvie veröffentlicht und bekannt gemacht wurde. Der Git-flow-Workflow definiert ein strenges Branching-Modell, das um den Release des Projekts konzipiert wurde. Dies bietet einen robusten Rahmen für das Management größerer Projekte.
 Git-flow ist hervorragend für Projekte mit einem Release-Zyklus nach Zeitplan geeignet. Mit diesem Workflow werden keine neuen Konzepte oder Befehle hinzugefügt, die nicht auch für 		den Feature-Branch-Workflow erforderlich sind. Stattdessen werden verschiedenen Branches sehr spezifische Rollen zugewiesen, und es wird genau festgelegt, wann und wie die 				Interaktion erfolgen soll. Zusätzlich zu feature-Branches werden einzelne Branches zum Vorbereiten, Warten und Erfassen von Releases verwendet. Dabei kannst du natürlich auch alle 		Vorteile von Feature-Branch-Workflows nutzen: Pull-Anfragen, isolierte Tests und eine effizientere Zusammenarbeit."' \cite{Git-flow-Workflow}
 
-Hier wird also ein anderer Branch (Develp-Branch) zusätzlich zum Master-Branch betrachtet. Dieser Branch wird für die Entwicklung verantwortlich sein, indem auf dem Master-Branch 			nur die Versionen zu sehen sind. Die Features werden in abgespaltenen Branchs vom Develop-Branch entwickelt und mit dem Develop-Branch nach einer erfolgreichem Pull Request 				zusammengeführt werden. Sind die Features auf dem Develop-Branch soweit für eine neue Version, wird ein Release-Branch vom Dvelop-Branch abgespalten. Mit dem Release-Branch werden keine 			Features mehr von anderen Branchs zusammengeführt. Dieser Branch sagt einfach "`Ich bin die neue Version"'. Falls der Release-Branch Fehler enthält, kann die Behebung dieser			Fehler wieder in einem anderen Branch geschehen und mit dem Release-Branch zusammengeführt werden. Funktioniert die Version einwandfrei, wird sie mit dem Master-Branch 						zusammengeführt. Die \cref{fig:Git-flow-Workflow} soll bei der Vorstellung von diesem Workflow helfen.
+Hier wird also ein anderer Branch (Develp-Branch) zusätzlich zum Master-Branch betrachtet. Dieser Branch wird für die Entwicklung verantwortlich sein, indem auf dem Master-Branch 			nur die Versionen zu sehen sind. Die Features werden in abgespaltenen Branchs vom Develop-Branch entwickelt und mit dem Develop-Branch nach einer erfolgreichem Pull Request 				zusammengeführt werden. Sind die Features auf dem Develop-Branch soweit für eine neue Version, wird ein Release-Branch vom Dvelop-Branch abgespalten. Mit dem Release-Branch werden keine 			Features mehr von anderen Branchs zusammengeführt. Dieser Branch sagt einfach "`Ich bin die neue Version"'. Falls der Release-Branch Fehler enthält, kann die Behebung dieser			Fehler wieder in einem anderen Branch geschehen und mit dem Release-Branch zusammengeführt werden. Funktioniert die Version einwandfrei, wird sie mit dem Master-Branch 						zusammengeführt. Die \cref{fig:Git-flow-Workflow} zeigt diesen Workflow.
 
-\begin{figure}[H]
+\begin{figure}[htbp]
 	\centering
 	\includegraphics[width=0.9\textwidth]{Git-flow-Workflow}
 	\caption[Git-flow-Workflow]{Git-flow-Workflow.\\ \cite{Git-flow-Workflow}}
@@ -161,9 +161,9 @@ Hier wird also ein anderer Branch (Develp-Branch) zusätzlich zum Master-Branch 
 	
 \textbf{Eigenschaften dieses Verfahrens:}
 \begin{itemize}
-	\item Jedes Feature ist in einem Feature-Branch gekapselt
-	\item Entwickler arbeiten nicht direkt an dem Haupt-Branch, demzufolge stören sie einander nicht
-	\item Eignet sich gut für große Projekte, die mehrere Versionen enthalten sollen
-	\item Dank des Develop-Branchs und der Release-Branchs hat der Master-Branch eine saubere Historie, da es auf dem Develop-Branchs statt dem Master-Branch entwickelt wird
+	\item Jedes Feature ist in einem Feature-Branch gekapselt.
+	\item Entwickler arbeiten nicht direkt an dem Haupt-Branch, demzufolge stören sie einander nicht.
+	\item Eignet sich gut für große Projekte, die mehrere Versionen enthalten sollen.
+	\item Dank des Develop-Branches und der Release-Branches hat der Master-Branch eine saubere Historie, da es auf dem Develop-Branchs statt dem Master-Branch entwickelt wird.
 \end{itemize}
 
