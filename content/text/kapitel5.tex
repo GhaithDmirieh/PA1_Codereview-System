@@ -33,7 +33,7 @@ vorgestellt und miteinander verglichen.
 \subsubsection{Hosten auf dem Server des Anbieters}
 \label{subsubsec:Bitbucket-Cloud}
 
-Für den Beginn Verlangt die Webanwendung vom Bitbucket nur eine Anmeldung und schon kann man anfangen, Projekte zu erstellen, in denen die Repositories geklont oder neue erstellt werden können. In dieser Anwendung können auch Funktionen durchgeführt werden, die man mit dem Command Line von Git macht. Wie beispielsweise ein neues Branch erstellen, wie in \cref{fig:Bitbucket-Branch-erstellen} zu sehen ist oder ein Repositpry klonen.
+Für den Beginn Verlangt die Webanwendung vom Bitbucket nur eine Anmeldung und schon kann man anfangen, Projekte zu erstellen, in denen die Repositories geklont oder neue erstellt werden können. In dieser Anwendung können auch Funktionen durchgeführt werden, die man mit dem Befehl Line von Git macht. Wie beispielsweise ein neues Branch erstellen, wie in \cref{fig:Bitbucket-Branch-erstellen} zu sehen ist oder ein Repositpry klonen.
 
 \begin{figure}[H]
 	\centering
@@ -140,28 +140,28 @@ Nach dem die Reviewer sich das Pull Request angeschaut,Kommentiert und Aufgaben 
 \subsection{Gerrit}
 \label{subsubsec:Test_Gerrit}
 
-Gerrit unterscheidet sich von den anderen Quellcodeverwaltungssysteme, da Gerrit mehr Gewicht auf das Review legt. Das System arbeitet ausschließlich mit dem \ac{VCS} Git und hat keine Cloud Version. D.h. bei Gerrit handelt es sich nur um self hosten. Die Installation auf odin erfolgte durch ein \textit{.war} Datei, die mit dem Command
+Gerrit unterscheidet sich von den anderen Quellcodeverwaltungssysteme, da Gerrit mehr Gewicht auf das Review legt. Das System arbeitet ausschließlich mit dem \ac{VCS} Git und hat keine Cloud Version. D.h. bei Gerrit handelt es sich nur um self hosten. Die Installation auf odin erfolgte durch ein \textit{.war} Datei, die mit dem Befehl
 
 {\color{blue}
 \begin{verbatim}
 	java -jar gerrit.war init -d <Pfad zur .war Datei> 
 \end{verbatim}}
 
-\noindent initialisieren lässt. Nach der Initialisierung müssen noch wichtige Konfigurationen in der datei \textit{gerrit.config}, die im Verzeichnis \textit{gerrit-Verzeichnis/etc} zu finden sind, eingestellt werden. Wie beispielsweise die Authentifizierung oder auch, wo Gerrit seine Projekte und Repositories anlegt. Das Programm kann danach mit dem Command
+\noindent initialisieren lässt. Nach der Initialisierung müssen noch wichtige Konfigurationen in der datei \textit{gerrit.config}, die im Verzeichnis \textit{gerrit-Verzeichnis/etc} zu finden sind, eingestellt werden. Wie beispielsweise die Authentifizierung oder auch, wo Gerrit seine Projekte und Repositories anlegt. Das Programm kann danach mit dem Befehl
 
 {\color{blue} 
 \begin{verbatim}
 	gerrit.sh start
 \end{verbatim}}
 
-\noindent gestartet werden. Diese Datei befindet sich im Verzeichnis \textit{Gerrit-Verzeichnis/bin}. Gerrit ist ab jetzt lauffähig und Projekte können erstellt werden. Um ein Projekt zu erstellen gibt es verschiedene Methoden. Hier wird ein Projekt via SSH erstellt, was durch das Command
+\noindent gestartet werden. Diese Datei befindet sich im Verzeichnis \textit{Gerrit-Verzeichnis/bin}. Gerrit ist ab jetzt lauffähig und Projekte können erstellt werden. Um ein Projekt zu erstellen gibt es verschiedene Methoden. Hier wird ein Projekt via SSH erstellt, was durch den Befehl
 
 {\color{blue}
 \begin{verbatim}
 	ssh -p <port> <host> gerrit create-project <Name des Projekts>
 \end{verbatim}}
 
-\noindent erfolgen lässt. Gerrit kann einfach als ein neues Remote für ein bestehendes Repository hinzugefügt werden. Schließlich werden die Commits dieses Repositorys mit dem command
+\noindent erfolgen lässt. Gerrit kann einfach als ein neues Remote für ein bestehendes Repository hinzugefügt werden. Schließlich werden die Commits dieses Repositorys mit dem Befehl
 
 {\color{blue}
 \begin{verbatim}
@@ -173,7 +173,7 @@ Gerrit unterscheidet sich von den anderen Quellcodeverwaltungssysteme, da Gerrit
 \subsubsection{Reviews Workflow}
 \label{subsubsec:Reviews Workflow bei Gerrit}
 
-Der erster Schritt ist das Hinzufügen ein \textbf{Change-Id} für die Commits. Dieses ID erlaubt Gerrit, verschiedene Versionen derselben Änderungen, die überprüft werden sollen, miteinander zu verknüpfen. Dieser Schritt ist durch die zwei Commands
+Der erster Schritt ist das Hinzufügen ein \textbf{Change-Id} für die Commits. Dieses ID erlaubt Gerrit, verschiedene Versionen derselben Änderungen, die überprüft werden sollen, miteinander zu verknüpfen. Dieser Schritt ist durch die zwei Befehle
 
 {\color{blue}
 \begin{verbatim}
