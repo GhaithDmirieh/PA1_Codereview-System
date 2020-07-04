@@ -6,7 +6,7 @@ Weil das \ac{CRS} Git unterstützen muss, kommen nur einige in Frage. Hier werde
 \subsection{Bitbucket}
 \label{subsec:Bitbucket}
 
-Bitbucket\footnote{\url{https://bitbucket.org/}} ist ein Quellcode-Management-System der das \ac{VCS} Git unterstützt. Bitbucket unterstützte nach seinem Entwurf als \ac{VCS} nur Mercurial. 3 Jahren später wurde um die Unterstützung von Git erweitert. Am 1. Juni 2020 wurde die Unterstützung von Mercurial vollständig eingestellt.
+Bitbucket\footnote{\url{https://bitbucket.org/}} ist ein Quellcode-Management-System, das das \ac{VCS} Git unterstützt. Bitbucket unterstützte nach seinem Entwurf als \ac{VCS} nur Mercurial. 3 Jahren später wurde es um die Unterstützung von Git erweitert. Am 1. Juni 2020 wurde die Unterstützung von Mercurial vollständig eingestellt.
 
 \begin{itemize}
 	\item \textbf{Art des Reviews}: \textit{pre- and post-commit} Und die erfolgt durch eine Pull Request
@@ -24,19 +24,19 @@ Die \cref{fig:Forking-workflow} verdeutlicht den Feature Branch Workflow.
 \begin{description}
 	\item [Bitbuckets Vorteile:] \hfill
 	\begin{itemize}
-		\item Unbegrenzte Anzahl von private Repositories
-		\item Hosting in Cloud oder auf eigenem Server
-		\item \ac{CI}/\ac{CD} sind in Bitbucket integriert
-		\item Erstellen von einer Merge-Checkliste mit zugeordneten Genehmigern
-		\item Für kleine Teams bis 5 Personen bestehen keine Kosten für das Hosten auf Bitbuckets Server
+		\item Unbegrenzte Anzahl von private Repositories.
+		\item Hosting in Cloud oder auf eigenem Server.
+		\item \ac{CI}/\ac{CD} sind in Bitbucket integriert.
+		\item Erstellen von einer Merge-Checkliste mit zugeordneten Genehmigern.
+		\item Für kleine Teams bis 5 Personen bestehen keine Kosten für das Hosten auf Bitbuckets Server.
 	\end{itemize}
 	
 	\item [Bitbuckets Nachteile:] \hfill
 	\begin{itemize}
-		\item Es besteht keine Möglichkeit, um bestehende gemergte commits zu reviewen
-		\item Das Review ist nur vor dem Zusammenführen von einem Feature-Branch mit dem Master-Branch Möglich
+		\item Es besteht keine Möglichkeit, um bestehende gemergte commits zu reviewen.
+		\item Das Review ist nur vor dem Zusammenführen von einem Feature-Branch mit dem Master-Branch Möglich.
 		\item Um zu hosten auf Bitbucketsever steht für mehr als 5 Personen einen monatlichen Beitrag und für Self-hosten (auf eigenem Server) besteht eine einmalige Zahlung. Der 
-			Preis für beide Varianten variiert je nach Personenanzahl
+			Preis für beide Varianten variiert je nach Personenanzahl.
 	\end{itemize}
 \end{description}
 
@@ -58,7 +58,7 @@ Crucible ist eine webbasierte Plattform, die ein formelles Codereview anbietet. 
 		Beispiele:
 		
 		\begin{enumerate}
-			\item One-to-One Reviews: Der Autor startet das Review (Der Autor ist also in diesem Workflow der Moderator), danach kommentiert der Reviewer und der Autor kann auf diese
+			\item One-to-One Reviews: Der Autor startet das Review \footnote{Der Autor ist also in diesem Workflow der Moderator}, danach kommentiert der Reviewer und der Autor kann auf diese
 				Kommentar reagieren. Das kann sich mehrmals wiederholen bis das Review fertig ist und der Autor diese schließt\\
 				Die \cref{fig:one-to-one-workflow} beschreibt diesen Workflow
 				\begin{figure}[H]
@@ -85,18 +85,18 @@ Crucible ist eine webbasierte Plattform, die ein formelles Codereview anbietet. 
 \begin{description}
 	\item [Crucibles Vorteile:] \hfill
 	\begin{itemize}
-		\item Das Review des Inhalts ist flexibel
-		\item Diskussionsrunden um in Bestimmten Quelltextzeilen oder ein bestimmtes Commit sowie einen gesamten Änderungssatz zu Kommentieren
-		\item Nachverfolgen, Maßnahmen ergreifen in Bezug auf das, was der Autor wichtig findet
-		\item Ansicht vom Reviewstatus und wer möglicherweise Überprüfungen aufhält
-		\item Berichte über Stellen im Quelltext, die noch nicht überprüft wurden
-		\item unterstützt nicht nur Git sonder unterstützt auch \ac{SVN}
+		\item Das Review des Inhalts ist flexibel.
+		\item Diskussionsrunden um in Bestimmten Quelltextzeilen oder ein bestimmtes Commit sowie einen gesamten Änderungssatz zu Kommentieren.
+		\item Nachverfolgen, Maßnahmen ergreifen in Bezug auf das, was der Autor wichtig findet.
+		\item Ansicht vom Reviewstatus und wer möglicherweise Überprüfungen aufhält.
+		\item Berichte über Stellen im Quelltext, die noch nicht überprüft wurden.
+		\item Unterstützt nicht nur Git sonder unterstützt auch \ac{SVN}.
 	\end{itemize}
 	
 	\item [Crucibles Nachteile:] \hfill
 	\begin{itemize}
-		\item Das Review muss manuell in Git eingefügt werden(Mergen ist nicht möglich)
-		\item Schwer zu erzwingen
+		\item Das Review muss manuell in Git eingefügt werden (Mergen ist nicht möglich).
+		\item Schwer zu erzwingen.
 	\end{itemize}
 \end{description}
 
@@ -116,28 +116,28 @@ Helix TeamHub ist eine webbasierte Plattform, die Hosten und Management von Repo
 		  Es wird zuerst ein Projekt erstellt und zu diesem Projekt wird ein Repository hinzugefügt. Durch Git wird ein Branch in diesem Repository
 		  erstellt. Der Entwickler arbeitet an diesem Branch. Sobald er mit seinen Änderungen fertig ist, erstellt er das Review. In den Einstellungen sucht man den Branch aus, dann werden Reviewer
 		  ausgewählt. Im Review sind die Kommentare auf Zeilenebene möglich. So bekommt der Autor Antworten und Verbesserungsvorschläge. Sobald das Review fertig ist,
-		  können die Änderungen automatisch in den Master Branch zusammengeführt werden, was sich durch einen Klick erfolgen lässt
+		  können die Änderungen automatisch in den Master Branch zusammengeführt werden, was sich durch einen Klick erfolgen lässt.
 
 \end{itemize}
 
 \begin{description}
 	\item [Vorteile:] \hfill
 	\begin{itemize}
-		\item Workflows sind flexibel, so dass die Administratoren diese einrichten können
-		\item Schnelle Übersicht über alle Branchs eines Repositorys
-		\item Zugriffsverwaltung, so kann sich der Admenstrator entscheiden, wer an einem Repository arbeitet und welche Rechte hat
-		\item Side-by-side Änderungsvergleich
-		\item Der Prozess des Reviews kann kontrolliert werden. Das Review kann auf bestimmte Personen beschränkt werden
-		\item Mergen von Reviews erfolgt automatisch
-		\item Helix Teamhub unterstützt \ac{CI}/\ac{CD} Tools
-		\item Kostenlos für Teams bis 5 Mitglieder
+		\item Workflows sind flexibel, so dass die Administratoren diese einrichten können.
+		\item Schnelle Übersicht über alle Branchs eines Repositorys.
+		\item Zugriffsverwaltung, so kann sich der Admenstrator entscheiden, wer an einem Repository arbeitet und welche Rechte hat.
+		\item Side-by-side Änderungsvergleich.
+		\item Der Prozess des Reviews kann kontrolliert werden. Das Review kann auf bestimmte Personen beschränkt werden.
+		\item Mergen von Reviews erfolgt automatisch.
+		\item Helix Teamhub unterstützt \ac{CI}/\ac{CD} Tools.
+		\item Kostenlos für Teams bis 5 Mitglieder.
 	\end{itemize}
 	
 	\item [Nachteile:] \hfill
 	\begin{itemize}
-	\item Für die kostenlose Variante steht totale Speichergröße von 1GB in Cloud zu Verfügung
-	\item Hosten auf eigenem Server ist nicht möglich
-	\item Die Abspeicherung von Daten auf dem Server variiert je nach dem jährlichen Beitrag
+	\item Für die kostenlose Variante steht eine totale Speichergröße von 1~GB in Cloud zu Verfügung.
+	\item Hosten auf eigenem Server ist nicht möglich.
+	\item Die Abspeicherung von Daten auf dem Server variiert je nach dem jährlichen Beitrag.
 	\end{itemize}
 \end{description}
 
@@ -156,36 +156,36 @@ Gerrit ist ein \ac{CRS}, das sich von den anderen \acp{CRS} stark unterscheidet.
 			\item Projekt für das Repository erstellen. Für die Erstellung vom Gerrit-Projekt gibt es verschiedene Methoden:
 			
 			\begin{itemize}
-				\item Direkt im Gerrits Web-Plattform
-				\item via \ac{SSH} command \cref{subsubsec:Test_Gerrit}
+				\item Direkt im Gerrits Web-Plattform.
+				\item via \ac{SSH} command \cref{subsubsec:Test_Gerrit}.
 			\end{itemize}
 			
 			Bei Gerrit kann nicht jeder Benutzer ein Projekt erstellen, sondern nur die Administrator des Projekts		
 			
 			\item Features entwickeln, dann die commiten und pushen. In diesem Fall pusht man die Änderungen nicht in den Haupt Branch, sondern in einen Gerrit Branch.
-				Gerrit benutzt dieser Branch für das Review. Dementsprechend kommt man mit \textit{git diff} \footnote{git Befehl, um Änderungen zu vergleichen} zum 							Vergleich zwischen den Änderungen im Arbeitsverzeichnis und den Änderungen auf dem Branch von Gerrit
+				Gerrit benutzt dieser Branch für das Review. Dementsprechend kommt man mit \textit{git diff} \footnote{git Befehl, um Änderungen zu vergleichen} zum 							Vergleich zwischen den Änderungen im Arbeitsverzeichnis und den Änderungen auf dem Branch von Gerrit.
 				
 			\item Nach dem pushen wird das Review in der Webseite von Gerrit zu finden sein. Auf dieser Webseite kann der Autor: 
 			\begin{itemize}
-				\item Diffs anzeigen lassen
-				\item Reviewer hinzufügen
-				\item Kommentare, Anmerkungen an bestimmten Code-Zeilen für die Reviewer hinterlassen
+				\item Diffs anzeigen lassen.
+				\item Reviewer hinzufügen.
+				\item Kommentare, Anmerkungen an bestimmten Code-Zeilen für die Reviewer hinterlassen.
 			\end{itemize}
 			
 			\item Die Reviewer können entweder das Review manuell finden oder bekommen sie eine E-Mail (wenn sie vom Autor als Reviewer gemerkt sind), dass ein Review
 				 gestartet wurde. Die Reviewer schauen die Änderungen, antworten auf sie und am Ende bewerten sie. Die Bewertung ist in Gerrit vorgeschrieben.
 				 
-			\item Darüber hinaus fragt Gerrit nach Bestätigung, dass die Änderungen getestet wurden, dass die also funktionieren. Testen kann entweder 
+			\item Darüber hinaus fragt Gerrit nach Bestätigung, dass die Änderungen getestet wurden, dass die also funktionieren. Testen kann entweder
 			\begin{itemize}
-				\item Manuell. Die Änderungen fetchen und lokal testen
-				\item Oder durch Nutzen von \ac{CI} Tools
+				\item Manuell. Die Änderungen fetchen und lokal testen.
+				\item Oder durch Nutzen von \ac{CI} Tools.
 			\end{itemize}
 			
 			\item Schließlich passiert Folgendes:
 			\begin{itemize}
 				\item Sind die Änderungen fehlerhaft oder fehlt etwas, was der Autor beachten musste, so fordern die Reviewer den Autor, die Änderungen zu bearbeitet
-			 		und nochmal in den Gerrits Branch zu pushen
-			 	\item Erfüllen die Änderungen die Anforderungen, So können sie mit dem Haupt-Branch zusammengeführt werden
+			 		und nochmal in den Gerrits Branch zu pushen.
+			 	\item Erfüllen die Änderungen die Anforderungen, So können sie mit dem Haupt-Branch zusammengeführt werden.
 			\end{itemize}			
 			
 		\end{enumerate}	
@@ -194,26 +194,26 @@ Gerrit ist ein \ac{CRS}, das sich von den anderen \acp{CRS} stark unterscheidet.
 \begin{description}
 	\item [Gerrits Vorteile:] \hfill
 	\begin{itemize}
-		\item Gerrit kann multiple Repositories beaufsichtigen
-		\item Clean history: Man kann Gerrit so einstellen, dass er nach dem Merge kein Merge-Commit erstellt, aufgrund dessen wird die Historie Linear bleiben
-		\item Jedes Repository kann unendliche Anzahl von Branchs enthalten
-		\item Automatisches Mergen mit dem Git-Repository nach Überprüfung der Änderungen ist möglich
-		\item \ac{CI}/\ac{CD} können in den Workflow eingebaut werden
-		\item Benutzerfreundliche Webschnittstelle zum Reviewen
-		\item Kostenlos \& Open-Source-Projekt
+		\item Gerrit kann multiple Repositories beaufsichtigen.
+		\item Clean history: Man kann Gerrit so einstellen, dass er nach dem Merge kein Merge-Commit erstellt, aufgrund dessen wird die Historie Linear bleiben.
+		\item Jedes Repository kann unendliche Anzahl von Branchs enthalten.
+		\item Automatisches Mergen mit dem Git-Repository nach Überprüfung der Änderungen ist möglich.
+		\item \ac{CI}/\ac{CD} können in den Workflow eingebaut werden.
+		\item Benutzerfreundliche Webschnittstelle zum Reviewen.
+		\item Kostenlos \& Open-Source-Projekt.
 	\end{itemize}
 	
 	\item [Gerrits Nachteile:] \hfill
 	\begin{itemize}
-		\item Kein Vergleich für die Reviewers Vorschläge mit den bestehenden Änderungen auf der Webseite möglich
-		\item Auf der Webseite von Gerrit können Branchs nicht erstellt werden
-		\item Nur Administratoren können Projekte in Gerrit hinzufügen
-		\item Der Änderungsvergleich ausgesuchte Commits ist nicht möglich
-		\item Gerrit arbeitet ausschließlich mit Git
+		\item Kein Vergleich für die Reviewers Vorschläge mit den bestehenden Änderungen auf der Webseite möglich.
+		\item Auf der Webseite von Gerrit können Branchs nicht erstellt werden.
+		\item Nur Administratoren können Projekte in Gerrit hinzufügen.
+		\item Der Änderungsvergleich ausgesuchte Commits ist nicht möglich.
+		\item Gerrit arbeitet ausschließlich mit Git.
 	\end{itemize}
 \end{description}
 
-\subsection{RhodCode}
+\subsection{RhodeCode}
 \label{subsec:RhodeCode}
 
 RhodCode ist ein Quellcode-Management, das die \acp{VCS} Git, Mercurial unterstützt. Es ist eine webbasierte Plattform also bietet auch eine Webschnittstelle, in der das Review geschieht.
@@ -226,9 +226,9 @@ RhodCode bietet eine freie Edition „RhodeCode CE“ (Community Edition) sowie 
 	\begin{itemize}
 		\item Das Review kann durch eine Pull Anfrage gestartet werden. Die \cref{fig:Forking-workflow} vom \cref{subsec:Bitbucket} zeigt den Ablauf
 			eine Pull Request. Also der Entwickler arbeitet in einem vom Haupt-Branch abgespalteten Branch macht Änderungen und sendet eine Pull Request so bald er fertig ist. 
-			So Geschieht das Review dementsprechend vor dem Mergen mit dem Haupt-Branch
+			So Geschieht das Review dementsprechend vor dem Mergen mit dem Haupt-Branch.
 		\item Oder kann der Reviewer sich die Änderungen in Commits-Historie anschauen und bestimmte Code-Zeile kommentieren und den Autor erwähnen, indem er seinen Namen nach einem 
-			\textbf{@} schreibt. So bekommt der Autor eine E-Mail, dass jemand seine Änderungen überprüft hat
+			\textbf{@} schreibt. So bekommt der Autor eine E-Mail, dass jemand seine Änderungen überprüft hat.
 	\end{itemize}
 \end{itemize}
 
@@ -238,18 +238,18 @@ RhodCode bietet eine freie Edition „RhodeCode CE“ (Community Edition) sowie 
 \begin{description}
 	\item [Vorteile] \hfill
 		\begin{enumerate}
-			\item Ein kostenloses- und Opensource-Projekt
-			\item Unbegrenzte Anzahl von Benutzern
-			\item Benutzerzugriffskontrolle
-			\item Dateisuche in allen Repositories sowie Volltextsuche \& Indizierung vom Quellcode.
-			\item Grundlegende Integrationen einschließlich E-Mail, Slack und Hipchat
+			\item Ein kostenloses- und Opensource-Projekt.
+			\item Unbegrenzte Anzahl von Benutzern.
+			\item Benutzerzugriffskontrolle.
+			\item Dateisuche in allen Repositories sowie Volltextsuche und Indizierung vom Quellcode.
+			\item Grundlegende Integrationen einschließlich E-Mail, Slack und Hipchat.
 		\end{enumerate}
 	\item [Nachteile] \hfill
 		\begin{enumerate}
-			\item Die diffs lassen sich nur inline angezeigt werden
-			\item Einschränkungen des Reviews sind nicht möglich
-			\item RhodeCode CE unterstützt keine \ac{CI}/\ac{CD} Tools
-			\item Hosting geht nur auf eigenem Server
+			\item Die Diffs lassen sich nur inline angezeigt werden.
+			\item Einschränkungen des Reviews sind nicht möglich.
+			\item RhodeCode CE unterstützt keine \ac{CI}/\ac{CD} Tools.
+			\item Hosting geht nur auf eigenem Server.
 		\end{enumerate}
 \end{description}
 
@@ -259,21 +259,21 @@ RhodCode bietet eine freie Edition „RhodeCode CE“ (Community Edition) sowie 
 \begin{description}
 	\item [Vorteile] \hfill
 		\begin{itemize}
-			\item Die diffs lassen sich inline oder side-by-side angezeigt werden
-			\item Das Review unterstützt Live-Chat für das Quellcode vor Ort sowie Feedback in allen Repositories
-			\item Regeln für das Review stellen. z. B. Wer die Änderungen überprüfen kann
-			\item Sperren von Repositories; Admins können Repositories sperren, so dass keine Änderungen mehr von anderen Benutzern in die Master-Branche gepusht sind
-			\item Dateien, Projekte und Repositories ordnen, strukturieren und unbegrenzt \, verschachteln
-			\item Unterstützt die Migration vom \ac{VCS} \ac{SVN} zu Git
-			\item RhodeCode EE unterstützt \ac{CI}/\ac{CD} Tools
-			\item Volltextsuche nach Umgebungen mit sehr großen Codebasen. Es kann Terabyte von Daten verarbeiten
+			\item Die diffs lassen sich inline oder side-by-side angezeigt werden.
+			\item Das Review unterstützt Live-Chat für das Quellcode vor Ort sowie Feedback in allen Repositories.
+			\item Regeln für das Review stellen. z. B. Wer die Änderungen überprüfen kann.
+			\item Sperren von Repositories; Admins können Repositories sperren, so dass keine Änderungen mehr von anderen Benutzern in die Master-Branche gepusht werden können.
+			\item Dateien, Projekte und Repositories ordnen, strukturieren und unbegrenzt \, verschachteln.
+			\item Unterstützt die Migration vom \ac{VCS} \ac{SVN} zu Git.
+			\item RhodeCode EE unterstützt \ac{CI}/\ac{CD} Tools.
+			\item Volltextsuche nach Umgebungen mit sehr großen Codebasen. Es kann Terabyte von Daten verarbeiten.
 		\end{itemize}
 		
 	\item [Nachteile] \hfill
 		\begin{itemize}
-			\item Verfügbar nur für mindestens 10 Benutzer mit einem jährlichen Beitrag von 75\$ pro Benutzer
-			\item Kein open-source Projekt
-			\item Hosting geht nur auf eigenem Server
+			\item Verfügbar nur für mindestens 10 Benutzer mit einem jährlichen Beitrag von 75\$ pro Benutzer.
+			\item Kein open-source Projekt.
+			\item Hosting geht nur auf eigenem Server.
 		\end{itemize}
 		
 \end{description}
