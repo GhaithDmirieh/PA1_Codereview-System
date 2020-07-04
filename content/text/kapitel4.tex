@@ -95,7 +95,7 @@ Crucible ist eine webbasierte Plattform, die ein formelles Codereview anbietet. 
 	
 	\item [Crucibles Nachteile:] \hfill
 	\begin{itemize}
-		\item Das Review muss manuell in Git eingefügt werden (Mergen ist nicht möglich).
+		\item Das Review muss manuell in Git eingefügt werden. D.h. Automatisches Zusammenführen ist nicht möglich.
 		\item Schwer zu erzwingen.
 	\end{itemize}
 \end{description}
@@ -124,7 +124,7 @@ Helix TeamHub ist eine webbasierte Plattform, die Hosten und Management von Repo
 	\item [Vorteile:] \hfill
 	\begin{itemize}
 		\item Workflows sind flexibel, so dass die Administratoren diese einrichten können.
-		\item Schnelle Übersicht über alle Branchs eines Repositorys.
+		\item Schnelle Übersicht über alle Branches eines Repositorys.
 		\item Zugriffsverwaltung, so kann sich der Admenstrator entscheiden, wer an einem Repository arbeitet und welche Rechte hat.
 		\item Side-by-side Änderungsvergleich.
 		\item Der Prozess des Reviews kann kontrolliert werden. Das Review kann auf bestimmte Personen beschränkt werden.
@@ -196,7 +196,7 @@ Gerrit ist ein \ac{CRS}, das sich von den anderen \acp{CRS} stark unterscheidet.
 	\begin{itemize}
 		\item Gerrit kann multiple Repositories beaufsichtigen.
 		\item Clean history: Man kann Gerrit so einstellen, dass er nach dem Merge kein Merge-Commit erstellt, aufgrund dessen wird die Historie Linear bleiben.
-		\item Jedes Repository kann unendliche Anzahl von Branchs enthalten.
+		\item Jedes Repository kann unendliche Anzahl von Branches enthalten.
 		\item Automatisches Mergen mit dem Git-Repository nach Überprüfung der Änderungen ist möglich.
 		\item \ac{CI}/\ac{CD} können in den Workflow eingebaut werden.
 		\item Benutzerfreundliche Webschnittstelle zum Reviewen.
@@ -205,7 +205,7 @@ Gerrit ist ein \ac{CRS}, das sich von den anderen \acp{CRS} stark unterscheidet.
 	
 	\item [Gerrits Nachteile:] \hfill
 	\begin{itemize}
-		\item Auf der Webseite von Gerrit können Branchs nicht erstellt werden.
+		\item Auf der Webseite von Gerrit können Branches nicht erstellt werden.
 		\item Nur Administratoren können Projekte in Gerrit hinzufügen.
 		\item Der Änderungsvergleich ausgesuchte Commits ist nicht möglich.
 		\item Gerrit arbeitet ausschließlich mit Git.
@@ -280,7 +280,7 @@ RhodCode bietet eine freie Edition „RhodeCode CE“ (Community Edition) sowie 
 \subsection{Github}
 \label{subsec:Github}
 
-Github ist eine webbasiert Plattform für das Management vom Quelltext. Github arbeitet ausschließlich mit dem \ac{VCS} Git. Es bietet die Gelegenheit, unbegrenzte Anzahl von public/private Repositories (Private Repositories erst seit 8. Januar 2019) auf Githubs Server zu hosten. Außerdem gehört Github seit Juni. 2018 Microsoft.
+Github ist eine webbasiert Plattform für das Management vom Quelltext. Github arbeitet ausschließlich mit dem \ac{VCS} Git. Es bietet die Gelegenheit, unbegrenzte Anzahl von public/private Repositories \footnote{Private Repositories erst seit 8. Januar 2019} auf Githubs Server zu hosten. Außerdem gehört Github seit Juni 2018 Microsoft.
 
 \begin{itemize}
 	\item \textbf{Art des Reviews}: \textit{pre- and post-commit}
@@ -316,7 +316,7 @@ Die Kostenlose Variante für die Community.
 	
 	\item [Nachteile:] \hfill
 	\begin{itemize}
-		\item Einschränkungen auf Branchen sind nicht möglich
+		\item Einschränkungen auf Branches sind nicht möglich
 		\item Das Review kann nicht auf bestimmte Benutzer beschränkt werden
 		\item Öffentliche Repositories haben mehr Features als die private Repositories
 	\end{itemize}
@@ -329,12 +329,12 @@ Die Kostenlose Variante für die Community.
 	\item [Vorteile:] \hfill
 	\begin{itemize}
 		\item Enthält alles was die Kostenlose Variante \cref{subsubsec:Free} kann
-		\item 3,000 Minuten im Monat für die Nutzung von Quellcode-Test-Tools für private Repositories
-		\item 2 GB Speicher für GitHub-Pakete
+		\item 3'000 Minuten im Monat für die Nutzung von Quellcode-Test-Tools für private Repositories
+		\item 2~GB Speicher für GitHub-Pakete
 		\item Informelle Pull-Anfragen starten, bevor man die formelle Überprüfung durchführt
-		\item Einschränkungen für das Zusammenführen von Branchen erzwingen
+		\item Einschränkungen für das Zusammenführen von Branches erzwingen
 		\item Anforderung zum Review durch ausgewählte Benutzer
-		\item Rechte für die Branchen geben, so können nur bestimmte Benutzer an einer bestimmten Branche arbeiten
+		\item Rechte für die Branches geben, so können nur bestimmte Benutzer an einer bestimmten Branche arbeiten
 	\end{itemize}
 	\item [Nachteile:] \hfill
 	\begin{itemize}
