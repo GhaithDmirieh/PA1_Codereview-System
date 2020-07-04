@@ -190,7 +190,7 @@ Der erster Schritt ist das Hinzufügen ein \textbf{Change-Id} für die Commits. 
 	\label{fig:Gerrit-Review}
 \end{figure}
 
-In dieser Webseite können die Reviewer hinzugefügt werden, die eine E-Mail bekommen, dass sie zum Review eingeladen sind. Gerrit verschickt auch E-Mails an den Autor Änderungen oder Kommentare vom Reviewer. Ebenfalls bekommen wieder die Reviewer E-Mails, wenn der Autor auf ihre Kommentare reagiert.
+Auf dieser Webseite können die Reviewer hinzugefügt werden, die eine E-Mail bekommen, dass sie zum Review eingeladen sind. Gerrit verschickt auch E-Mails an den Autor Änderungen oder Kommentare vom Reviewer. Ebenfalls bekommen wieder die Reviewer E-Mails, wenn der Autor auf ihre Kommentare reagiert.
 
 Reviewer haben die Möglichkeit auf Zeilenebene die Änderungen zu kommentieren. Beispiel dafür zeigt die \cref{fig:Gerrit Reviewer-Kommentare} 
 
@@ -222,13 +222,13 @@ Selber auf die Nachricht des Commits Können die Reviewer kommentieren. Beispiel
 Nachdem die Reviewer die Änderungen anschauen und darauf reagieren und ihre Vorschläge machen, bekommen die Antworten vom Autor, diese sind Kommentare oder Bearbeitung der Änderungen. Falls die Reviewer die bearbeitete Änderungen gut finden, können sie diese bestätigen. Erst wenn die Änderungen bestätigt sind, kann das Commit mit dem Ziel-Branch zusammengeführt werden.
 
 Die Reviewer können auf 5 Ebenen die Änderungen bewerten, diese sind
-\begin{enumerate}
-	\item \textbf{-2} Ich bestätige sie nicht
-	\item \textbf{-1} Sieht für mich gut aus, aber jemand anderes muss sie noch bestätigen
+\begin{compactitem}
+	\item \textbf{-2} Abgelehnt, Die Änderungen dürfen nicht gemergt werden.
+	\item \textbf{-1} Ich bestätige sie nicht. Die Änderungen müssen bearbeitet werden.
 	\item \textbf{0}  Keine Punktzahl
-	\item \textbf{+1} Ich würde es vorziehen, Wenn Sie sie nicht einchecken
-	\item \textbf{+2} Sieht gut aus. Ich bestätige sie
-\end{enumerate}
+	\item \textbf{+1} Sieht für mich gut aus, aber jemand anderes muss sie noch bestätigen.
+	\item \textbf{+2} Sieht gut aus. Ich bestätige sie.
+\end{compactitem}
 
 \subsection{Vergleich}
 \label{subsec:Vergleich_Bitbucket_Gerrit}
