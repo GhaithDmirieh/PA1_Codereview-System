@@ -131,6 +131,13 @@ Git bietet die Möglichkeit, den Workflow an den Bedürfnisse des Teams anzupass
 Ziel dieses Workflows, dass ein anderer Branch statt dem Master-Branch (Haupt-Branch) für die Entwicklung von Features und das Review verwendet.
 Ablauf: Vom Master-Branch wird einen Branch erstellt, den der Entwickler zu seiner Arbeitskopie klont. So arbeitet er \footnote{Es können auch mehrere Entwickler sein} unabhängig von seinen Kollegen an einem bestimmten Feature und 		sobald er das Feature fertig hat, wird er seine Änderungen mit einem \code{push} in dem abgespaltenen Branch senden. Danach kann der Entwickler je nach Einstellungen des Systems das 	Review starten. Wird das Review z. B. mit einem Pull-Request gemacht, soll der Entwickler an dieser Stelle das Pull-Request starten. So können sich die Reviewer die 				Änderungen anschauen, kommentieren und mit dem Autor diskutieren und am Ende diese Änderungen entweder annehmen oder ablehnen. Werden diese Änderungen angenommen, können direkt in 		den Master-Branch zusammengeführt werden \cite{Feature-Branch-Workflow}. Die \cref{fig:Forking-workflow} verdeutlicht diesen Prozess. 
 
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1.0\textwidth]{bitbucket_Forking-Workflorw}
+	\caption[Feature-Branch-Workflow]{Pull-Request.\\Eigene Darstellung}
+	\label{fig:Forking-workflow}
+\end{figure}
+
 \textbf{Eigenschaften dieses Workflows:}
 \begin{itemize}
 	\item Entwickler arbeiten nicht direkt an dem Haupt-Branch, demzufolge stören sie einander nicht
