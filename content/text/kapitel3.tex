@@ -69,17 +69,17 @@ Es gibt 4 Bereiche, mit denen Entwicklern ihren Code überprüfen.
 	
 		Smartbears Umfrage zufolge verwenden \textbf{69\%} der Befragten Repository Tools als Teil ihres Codereviews, unabhängig davon, ob sie das Review durch eine Pull Request 					durchführen oder in ein spezielles Peer Codereview Tool oder statisches Analysetool integrieren. Das bildet ein deutlicher Anstieg von \textbf{42\%} im Jahr 2018 							\cite{smartbear}
 
-	\item \textbf{\ac{IDE}:} Wie z.B. Visual Studio\footnote{https://visualstudio.microsoft.com} bietet die Möglichkeit, direkt in der Umgebung das Review zu starten
+	\item \textbf{\ac{IDE}:} Wie z.B. Visual Studio\footnote{\url{https://visualstudio.microsoft.com}} bietet die Möglichkeit, direkt in der Umgebung das Review zu starten.
 
-	\item \textbf{Statische Analysetools:} Ein Beispiel dafür ist SonarQube\footnote{https://www.sonarqube.org}. Es ist eine Plattform, die automatisierte Regeln für die statische Code-			Analyse definieren und benachrichtigt den Entwickler von seiner Pull Request, die durch Repository-Verwaltungstools erstellt wurden
+	\item \textbf{Statische Analysetools:} Ein Beispiel dafür ist SonarQube\footnote{\url{https://www.sonarqube.org}}. Es ist eine Plattform, die automatisierte Regeln für die statische Code-Analyse definiert. Der Autor wird benachrichtigt, dass jemand sein Pull Request bzw. seine Änderungen überprüft hat, das durch Repository-Verwaltungstools erstellt wurden.
 
-	\item \textbf{Peer-Codereview-Tools:} Beispiele sind: Crucible im \cref{subsec:Crucible} und Gerrit im \cref{subsec:Gerrit}. Das Hauptziel solcher Tools ist, einen einfachen und 				unkomplizierten Review anzubieten. Sie können kein Repository verwalten, haben aber andere Eingenschaften beispielsweise Änderungsvergleich anzeigen
+	\item \textbf{Peer-Codereview-Tools:} Beispiele sind: Crucible im \cref{subsec:Crucible} und Gerrit im \cref{subsec:Gerrit}. Das Hauptziel solcher Tools ist, einen einfachen und 				unkomplizierten Review anzubieten. Sie können kein Repository verwalten, haben aber andere Eingenschaften beispielsweise Änderungsvergleich anzeigen.
 \end{itemize}
 
 \subsection{Codereview-System}
 \label{subsec:CRS}
 
-Ein Codereview-System ist ein allgemeiner Begriff, der ein Tool beschreibt, das fähig ist, die Entwickler die Möglichkeit anbietet Codereview durchführen zu können und diesen Review zu steuern. Dieses System kann ein Repository Verwaltungstool, Statisches Analysetool, IDE oder ein Peer-Codereview-Tool sein. Beispiele dafür sind im \cref{sec:CRS-Git}.
+Ein Codereview-System ist ein allgemeiner Begriff, der ein Tool beschreibt, das fähig ist die Entwickler die Möglichkeit anbietet ein Codereview durchführen zu können und dieses Review zu steuern. Dieses System kann ein Repository Verwaltungstool, Statisches Analysetool, IDE oder ein Peer-Codereview-Tool sein. Beispiele dafür sind im \cref{sec:CRS-Git}.
 
 \subsection{Kriterien \& Erwartungen an das System}
 \label{sec:kriterien}
@@ -87,12 +87,12 @@ Ein Codereview-System ist ein allgemeiner Begriff, der ein Tool beschreibt, das 
 Folgende Eingenschaften sind die Kriterien, die in Betracht bei der Vorstellung von allen \acp{CRS} genommen werden sollen:
 
 \begin{itemize}
-	\item Es soll das \ac{VCS} Git unbedingt unterstützen
-	\item Die Unterstützung vom \ac{VCS} \ac{SVN} ist ein Bonus
-	\item Es soll den Änderungsvergleich sowohl inline als auch Side-by-side deutlich darstellen können
-	\item \ac{CI}/\ac{CD} Tools sollen in den Workflow eingebaut werden können oder in dem System integrieren sein
-	\item Das System kann auf dem eigenen Server gehostet werden
-	\item Das System kann die Review-Kommentare nach Beenden des Reviews automatisch mit dem Haupt-Repository Zusammenführen
-	\item Review-Kommentare sind auf Zeilenebene möglich
-	\item Zugriffsverwaltung ist ein Vorteil
+	\item Es soll das \ac{VCS} Git unbedingt unterstützen.
+	\item Die Unterstützung vom \ac{VCS} \ac{SVN} ist ein Bonus.
+	\item Es soll den Änderungsvergleich sowohl inline als auch Side-by-side deutlich darstellen können.
+	\item \ac{CI}/\ac{CD} Tools sollen in den Workflow eingebaut werden können oder in dem System integrieren sein.
+	\item Das System kann auf dem eigenen Server gehostet werden.
+	\item Das System kann die Review-Kommentare nach Beenden des Reviews automatisch mit dem Haupt-Repository Zusammenführen.
+	\item Review-Kommentare sind auf Zeilenebene möglich.
+	\item Zugriffsverwaltung ist ein Vorteil.
 \end{itemize}
